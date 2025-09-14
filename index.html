@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancing Portfolio | Web Development Projects</title>
+    <meta name="description" content="Portfolio of web development projects including Stellarpulse event website, business sites, and interactive components.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #fff, #f0f0f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .featured-project {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .featured-project h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #00f5ff;
+        }
+
+        .featured-project p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #00f5ff, #8a2be2);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 245, 255, 0.5);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card h3 {
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .project-card p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .project-link {
+            color: #00f5ff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #fff;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Web Development Portfolio</h1>
+            <p>Crafting exceptional digital experiences for businesses and events</p>
+        </div>
+
+        <div class="featured-project">
+            <h2>🌌 Stellarpulse - Featured Project</h2>
+            <p>A stunning one-page website for Stellarpulse, a non-profit collective curating progressive, psy-trance, hitech and hard-techno events across Switzerland. Features cosmic-themed animations, responsive design, and seamless event promotion.</p>
+            <a href="stellarpulse-website.html" class="cta-button">View Stellarpulse Website</a>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>🏗️ SDF Contractors</h3>
+                <p>Professional construction company website with modern design, project showcases, and client testimonials.</p>
+                <a href="sdf-contractors-redesign.html" class="project-link">View Project →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>🎓 Education Leadership</h3>
+                <p>Coaching services platform with booking system, service packages, and professional branding.</p>
+                <a href="education-leadership-enhanced.html" class="project-link">View Project →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>❤️ FRST Foundation</h3>
+                <p>Non-profit donation platform with streamlined giving process and impact visualization.</p>
+                <a href="frst-foundation-redesign.html" class="project-link">View Project →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>🎨 Logo Collection</h3>
+                <p>Modern logo designs with customization tools and professional branding solutions.</p>
+                <a href="modern-logo-collection.html" class="project-link">View Project →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>🛥️ 360° Product Viewer</h3>
+                <p>Interactive product display component with smooth rotation and zoom capabilities.</p>
+                <a href="boat-360-viewer.html" class="project-link">View Project →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>💎 VIP Bundle Mockup</h3>
+                <p>Premium product bundle presentation with elegant design and compelling value proposition.</p>
+                <a href="vip-bundle-mockup.html" class="project-link">View Project →</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Freelancing Portfolio | Crafted with passion for digital excellence</p>
+        </div>
+    </div>
+</body>
+</html>
