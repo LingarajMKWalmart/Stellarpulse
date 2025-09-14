@@ -36,18 +36,18 @@
     
     <style>
         :root {
-            --primary-purple: #6B46C1;
-            --secondary-blue: #1E40AF;
+            --primary-purple: #6366F1;
+            --secondary-blue: #3B82F6;
             --accent-cyan: #06B6D4;
-            --accent-pink: #EC4899;
-            --accent-orange: #F59E0B;
-            --dark-bg: #0F0F23;
-            --darker-bg: #0A0A1A;
+            --accent-pink: #8B5CF6;
+            --accent-orange: #10B981;
+            --dark-bg: #1a1f2e;
+            --darker-bg: #0f1419;
             --text-primary: #FFFFFF;
-            --text-secondary: #A8A8B3;
-            --text-accent: #E2E8F0;
-            --pulse-glow: rgba(107, 70, 193, 0.6);
-            --wave-color: #8B5CF6;
+            --text-secondary: #CBD5E1;
+            --text-accent: #F1F5F9;
+            --pulse-glow: rgba(99, 102, 241, 0.4);
+            --wave-color: #6366F1;
         }
         
         * {
@@ -63,7 +63,7 @@
         
         body {
             font-family: 'Rajdhani', sans-serif;
-            background: var(--dark-bg);
+            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
             color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
@@ -94,7 +94,7 @@
             opacity: 0.7;
         }
         
-        /* Animated Background */
+        /* Professional Background */
         .stellar-bg {
             position: fixed;
             top: 0;
@@ -102,7 +102,7 @@
             width: 100%;
             height: 100%;
             z-index: -2;
-            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 50%, #1A1A3A 100%);
+            background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 25%, #252b3a 50%, #1a1f2e 75%, #0f1419 100%);
         }
         
         .stars {
@@ -110,19 +110,19 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(2px 2px at 20px 30px, #FFFFFF, transparent),
-                radial-gradient(2px 2px at 40px 70px, var(--accent-cyan), transparent),
-                radial-gradient(1px 1px at 90px 40px, var(--accent-pink), transparent),
-                radial-gradient(1px 1px at 130px 80px, #FFFFFF, transparent),
-                radial-gradient(2px 2px at 160px 30px, var(--accent-orange), transparent);
+                radial-gradient(1px 1px at 50px 50px, rgba(255, 255, 255, 0.4), transparent),
+                radial-gradient(1px 1px at 150px 120px, rgba(255, 255, 255, 0.3), transparent),
+                radial-gradient(1px 1px at 300px 80px, rgba(255, 255, 255, 0.5), transparent),
+                radial-gradient(1px 1px at 450px 200px, rgba(255, 255, 255, 0.2), transparent),
+                radial-gradient(1px 1px at 200px 300px, rgba(255, 255, 255, 0.4), transparent);
             background-repeat: repeat;
-            background-size: 200px 100px;
-            animation: twinkle 20s linear infinite;
+            background-size: 500px 400px;
+            animation: subtleGlow 15s ease-in-out infinite;
         }
         
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.7; }
-            50% { opacity: 1; }
+        @keyframes subtleGlow {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 0.8; }
         }
         
         .nebula {
@@ -132,24 +132,25 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(ellipse at 20% 30%, rgba(107, 70, 193, 0.3) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 70%, rgba(6, 182, 212, 0.2) 0%, transparent 50%),
-                radial-gradient(ellipse at 50% 50%, rgba(236, 72, 153, 0.1) 0%, transparent 70%);
-            animation: nebulaDrift 30s ease-in-out infinite;
+                radial-gradient(ellipse 800px 400px at 20% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse 600px 300px at 80% 70%, rgba(139, 92, 246, 0.06) 0%, transparent 60%),
+                radial-gradient(ellipse 1000px 500px at 50% 90%, rgba(16, 185, 129, 0.04) 0%, transparent 70%);
+            animation: professionalFlow 25s ease-in-out infinite;
         }
         
-        @keyframes nebulaDrift {
-            0%, 100% { transform: rotate(0deg) scale(1); }
-            50% { transform: rotate(5deg) scale(1.1); }
+        @keyframes professionalFlow {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            33% { transform: translateY(-10px) scale(1.02); }
+            66% { transform: translateY(5px) scale(0.98); }
         }
         
-        /* Audio Wave Visualization */
+        /* Professional Wave Visualization */
         .wave-container {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 100px;
+            height: 60px;
             z-index: -1;
             overflow: hidden;
         }
@@ -162,27 +163,27 @@
             height: 100%;
             background: linear-gradient(90deg, 
                 transparent 0%,
-                var(--wave-color) 25%,
-                var(--accent-cyan) 50%,
-                var(--accent-pink) 75%,
+                rgba(59, 130, 246, 0.1) 25%,
+                rgba(139, 92, 246, 0.1) 50%,
+                rgba(16, 185, 129, 0.1) 75%,
                 transparent 100%);
-            opacity: 0.1;
-            animation: waveMove 8s ease-in-out infinite;
+            opacity: 0.6;
+            animation: professionalWave 12s ease-in-out infinite;
         }
         
         .wave:nth-child(2) {
-            animation-delay: -2s;
-            opacity: 0.05;
+            animation-delay: -4s;
+            opacity: 0.4;
         }
         
         .wave:nth-child(3) {
-            animation-delay: -4s;
-            opacity: 0.08;
+            animation-delay: -8s;
+            opacity: 0.3;
         }
         
-        @keyframes waveMove {
-            0%, 100% { transform: translateX(-50%) scaleY(0.5); }
-            50% { transform: translateX(-40%) scaleY(1); }
+        @keyframes professionalWave {
+            0%, 100% { transform: translateX(-50%) scaleY(0.8); }
+            50% { transform: translateX(-45%) scaleY(1.1); }
         }
         
         /* Navigation */
