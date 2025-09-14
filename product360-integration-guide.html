@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product 360° Viewer - Integration Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .demo-section {
+            margin: 40px 0;
+            padding: 20px;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+        }
+        
+        .demo-title {
+            color: #666;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        
+        .instructions {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚤 Product 360° Viewer - Drop-in Solution</h1>
+        
+        <div class="instructions">
+            <h3>📋 Quick Setup Instructions:</h3>
+            <ol>
+                <li><strong>Prepare your images:</strong> Create 36 images of your boat from different angles (0°, 10°, 20°, etc.)</li>
+                <li><strong>Name them sequentially:</strong> frame_001.jpg, frame_002.jpg, ... frame_036.jpg</li>
+                <li><strong>Upload to a folder:</strong> Put all images in an "images" folder on your server</li>
+                <li><strong>Add the code below</strong> to your website</li>
+            </ol>
+        </div>
+        
+        <div class="demo-section">
+            <div class="demo-title">🎯 Method 1: Auto-Initialize (Easiest)</div>
+            <p>Just add the HTML and script tags. The viewer will initialize automatically:</p>
+            
+            <div class="code-block">
+&lt;!-- Add this where you want the 360° viewer --&gt;
+&lt;div data-product360 
+     data-images="./images/" 
+     data-frames="36"
+     data-width="600px" 
+     data-height="400px"
+     data-autorotate="false"
+     data-controls="true"&gt;
+&lt;/div&gt;
+
+&lt;!-- Add this script before closing &lt;/body&gt; tag --&gt;
+&lt;script src="product360viewer.js"&gt;&lt;/script&gt;
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <div class="demo-title">⚙️ Method 2: Manual Initialize (More Control)</div>
+            <p>Initialize manually with custom options:</p>
+            
+            <div class="code-block">
+&lt;div id="my-boat-viewer"&gt;&lt;/div&gt;
+
+&lt;script src="product360viewer.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+const viewer = new Product360Viewer('#my-boat-viewer', {
+    totalFrames: 36,
+    imagePath: './boat-images/',
+    imagePrefix: 'boat_',
+    imageExtension: '.jpg',
+    width: '800px',
+    height: '500px',
+    autoRotate: true,
+    rotationSpeed: 2,
+    showControls: true,
+    onLoad: function(viewer) {
+        console.log('360° viewer loaded!');
+    },
+    onRotate: function(frame, viewer) {
+        console.log('Now showing frame:', frame);
+    }
+});
+&lt;/script&gt;
+            </div>
+        </div>
+        
+        <div class="grid">
+            <div class="demo-section">
+                <div class="demo-title">📁 Image Naming Convention</div>
+                <div class="code-block">
+images/
+├── frame_001.jpg
+├── frame_002.jpg  
+├── frame_003.jpg
+├── ...
+└── frame_036.jpg
+
+OR with custom prefix:
+boat-images/
+├── boat_001.jpg
+├── boat_002.jpg
+├── ...
+└── boat_036.jpg
+                </div>
+            </div>
+            
+            <div class="demo-section">
+                <div class="demo-title">🎛️ All Available Options</div>
+                <div class="code-block">
+{
+  // Image settings
+  totalFrames: 36,
+  imagePath: './images/',
+  imagePrefix: 'frame_',
+  imageExtension: '.jpg',
+  
+  // Behavior
+  autoRotate: false,
+  rotationSpeed: 3,
+  sensitivity: 1,
+  clockwise: true,
+  enableInertia: true,
+  preloadAll: true,
+  
+  // UI
+  showControls: true,
+  showProgress: true,
+  showFullscreen: true,
+  width: '100%',
+  height: '400px',
+  
+  // Callbacks
+  onLoad: null,
+  onRotate: null
+}
+                </div>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <div class="demo-title">🎮 API Methods</div>
+            <p>Control the viewer programmatically:</p>
+            
+            <div class="code-block">
+const viewer = new Product360Viewer('#my-viewer');
+
+// Control methods
+viewer.startAutoRotate();     // Start auto rotation
+viewer.stopAutoRotate();      // Stop auto rotation
+viewer.toggleAutoRotate();    // Toggle auto rotation
+viewer.resetView();           // Go back to first frame
+viewer.goToFrame(18);         // Go to specific frame (0-35)
+viewer.toggleFullscreen();    // Toggle fullscreen mode
+viewer.destroy();             // Clean up and remove viewer
+
+// Get current state
+console.log(viewer.currentFrame);    // Current frame index
+console.log(viewer.isAutoRotating);  // Auto rotation status
+console.log(viewer.isLoaded);        // Loading complete status
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <div class="demo-title">📱 Mobile & Touch Support</div>
+            <p>The viewer automatically supports:</p>
+            <ul>
+                <li>✅ Touch drag to rotate on mobile devices</li>
+                <li>✅ Responsive design that adapts to screen size</li>
+                <li>✅ Smooth inertia scrolling</li>
+                <li>✅ Prevents page scrolling while rotating</li>
+                <li>✅ Optimized for both portrait and landscape</li>
+            </ul>
+        </div>
+        
+        <div class="demo-section">
+            <div class="demo-title">🚀 Performance Features</div>
+            <ul>
+                <li><strong>Lazy Loading:</strong> Images load progressively for faster initial load</li>
+                <li><strong>Optimized Rendering:</strong> Only shows active frame, hides others</li>
+                <li><strong>Memory Efficient:</strong> Reuses image elements</li>
+                <li><strong>Small Footprint:</strong> ~8KB minified + gzipped</li>
+                <li><strong>No Dependencies:</strong> Pure JavaScript, no jQuery or other libraries</li>
+                <li><strong>Cross-Browser:</strong> Works in all modern browsers + IE11</li>
+            </ul>
+        </div>
+        
+        <div class="instructions">
+            <h3>📸 Creating Your Boat Images:</h3>
+            <ol>
+                <li><strong>Photography Setup:</strong> Place boat on turntable or rotate camera around boat</li>
+                <li><strong>Consistent Lighting:</strong> Use even lighting to avoid shadows</li>
+                <li><strong>Same Distance:</strong> Keep camera at same distance for all shots</li>
+                <li><strong>36 Angles:</strong> Take photos every 10° (36 total for smooth rotation)</li>
+                <li><strong>Image Size:</strong> 800-1200px wide is optimal for web</li>
+                <li><strong>Format:</strong> JPG for photos, PNG if you need transparency</li>
+                <li><strong>Optimization:</strong> Compress images to 60-80% quality for faster loading</li>
+            </ol>
+        </div>
+        
+        <div class="demo-section">
+            <div class="demo-title">🎨 Styling & Customization</div>
+            <p>Customize the appearance with CSS:</p>
+            
+            <div class="code-block">
+/* Custom viewer styling */
+.p360-viewer {
+    border: 3px solid #007bff !important;
+    border-radius: 15px !important;
+    box-shadow: 0 10px 30px rgba(0,123,255,0.3) !important;
+}
+
+/* Custom control buttons */
+.p360-btn {
+    background: linear-gradient(45deg, #007bff, #0056b3) !important;
+    box-shadow: 0 2px 10px rgba(0,123,255,0.3) !important;
+}
+
+/* Custom progress bar */
+.p360-progress-bar {
+    background: linear-gradient(90deg, #28a745, #20c997) !important;
+}
+
+/* Hide specific controls */
+.p360-fullscreen-btn { display: none !important; }
+            </div>
+        </div>
+    </div>
+</body>
+</html>

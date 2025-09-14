@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Logo Design - Inspired Collection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800;900&family=Nunito:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
+            color: #2d3748;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background Particles */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 25% 25%, rgba(120, 119, 198, 0.2) 0%, transparent 50%),
+                        radial-gradient(circle at 75% 75%, rgba(255, 119, 198, 0.2) 0%, transparent 50%);
+            animation: bgFloat 20s ease-in-out infinite;
+        }
+
+        @keyframes bgFloat {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.3; }
+            50% { transform: scale(1.2) rotate(180deg); opacity: 0.6; }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .hero-section {
+            text-align: center;
+            padding: 80px 0 60px;
+            position: relative;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #667eea);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientFlow 4s ease-in-out infinite;
+            margin-bottom: 20px;
+            text-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes gradientFlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        /* Logo Showcase Grid */
+        .logo-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 40px;
+            margin: 60px 0;
+        }
+
+        .logo-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 50px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.6s;
+        }
+
+        .logo-card:hover::before {
+            left: 100%;
+        }
+
+        .logo-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Logo Display Area */
+        .logo-display {
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            position: relative;
+            background: #f8fafc;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .logo-display:hover {
+            background: #e2e8f0;
+            transform: scale(1.05);
+        }
+
+        /* Design 1: TechFlow */
+        .techflow-logo {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .techflow-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            font-weight: 800;
+            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.4);
+            animation: techPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes techPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 10px 30px rgba(79, 172, 254, 0.4); }
+            50% { transform: scale(1.05); box-shadow: 0 15px 40px rgba(79, 172, 254, 0.6); }
+        }
+
+        .techflow-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2d3748;
+        }
+
+        /* Design 2: CreativeLab */
+        .creativelab-logo {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .creativelab-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            font-weight: 800;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .creativelab-icon::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: rotate 4s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .creativelab-text {
+            font-family: 'Nunito', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Design 3: DataVision */
+        .datavision-logo {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .datavision-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            font-weight: 800;
+            animation: hexFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes hexFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(180deg); }
+        }
+
+        .datavision-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #4a5568;
+        }
+
+        /* Design 4: NeoStudio */
+        .neostudio-logo {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .neostudio-icon {
+            width: 100px;
+            height: 60px;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            font-weight: 800;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .neostudio-icon::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+            animation: shine 3s ease-in-out infinite;
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            50%, 100% { left: 100%; }
+        }
+
+        .neostudio-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        /* Design 5: PixelForge */
+        .pixelforge-logo {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .pixelforge-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+            transform: rotate(45deg);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            font-weight: 800;
+            animation: diamondSpin 8s linear infinite;
+        }
+
+        .pixelforge-icon span {
+            transform: rotate(-45deg);
+        }
+
+        @keyframes diamondSpin {
+            from { transform: rotate(45deg); }
+            to { transform: rotate(405deg); }
+        }
+
+        .pixelforge-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Design 6: FlowDesign */
+        .flowdesign-logo {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .flowdesign-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: #2d3748;
+            font-weight: 800;
+            position: relative;
+        }
+
+        .flowdesign-icon::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 120%;
+            height: 120%;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-radius: 25px;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            animation: flowPulse 4s ease-in-out infinite;
+        }
+
+        @keyframes flowPulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.1; }
+        }
+
+        .flowdesign-text {
+            font-family: 'Nunito', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #4a5568;
+        }
+
+        /* Logo Info */
+        .logo-info {
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-title {
+            font-size: 1.6rem;
+            color: #2d3748;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .logo-description {
+            color: #718096;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .logo-tags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: rgba(103, 126, 234, 0.1);
+            color: #667eea;
+            border: 1px solid #667eea;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Customization Panel */
+        .custom-panel {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 40px;
+            margin: 60px 0;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .panel-title {
+            font-size: 2.5rem;
+            color: #2d3748;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .custom-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .control-label {
+            color: #4a5568;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .control-input {
+            background: #f7fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 12px 15px;
+            color: #2d3748;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .control-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(103, 126, 234, 0.1);
+        }
+
+        .live-preview {
+            background: #f8fafc;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #e2e8f0;
+        }
+
+        .preview-logo {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #2d3748;
+            transition: all 0.3s ease;
+        }
+
+        /* Download Section */
+        .download-section {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .download-title {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .download-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 18px 25px;
+            border-radius: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .download-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .logo-showcase {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .logo-card {
+                padding: 30px;
+            }
+            
+            .techflow-text,
+            .creativelab-text,
+            .datavision-text,
+            .pixelforge-text,
+            .flowdesign-text {
+                font-size: 2rem;
+            }
+            
+            .neostudio-text {
+                font-size: 1.8rem;
+            }
+            
+            .preview-logo {
+                font-size: 3rem;
+            }
+        }
+
+        /* Animation for logo displays */
+        .logo-display {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .logo-card:nth-child(1) { animation-delay: 0.1s; }
+        .logo-card:nth-child(2) { animation-delay: 0.2s; }
+        .logo-card:nth-child(3) { animation-delay: 0.3s; }
+        .logo-card:nth-child(4) { animation-delay: 0.4s; }
+        .logo-card:nth-child(5) { animation-delay: 0.5s; }
+        .logo-card:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1 class="hero-title">Modern Logo Collection</h1>
+            <p class="hero-subtitle">Professional brand identities inspired by contemporary design trends</p>
+        </section>
+
+        <!-- Logo Showcase -->
+        <section class="logo-showcase">
+            <!-- TechFlow -->
+            <div class="logo-card">
+                <div class="logo-display">
+                    <div class="techflow-logo">
+                        <div class="techflow-icon">TF</div>
+                        <div class="techflow-text">TechFlow</div>
+                    </div>
+                </div>
+                <div class="logo-info">
+                    <h3 class="logo-title">TechFlow</h3>
+                    <p class="logo-description">Modern tech company logo with animated pulsing effect and clean typography. Perfect for software and digital agencies.</p>
+                    <div class="logo-tags">
+                        <span class="tag">Tech</span>
+                        <span class="tag">Modern</span>
+                        <span class="tag">Animated</span>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="customizeLogo('techflow')">Customize</button>
+                        <button class="btn btn-secondary" onclick="downloadLogo('techflow')">Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CreativeLab -->
+            <div class="logo-card">
+                <div class="logo-display">
+                    <div class="creativelab-logo">
+                        <div class="creativelab-icon">CL</div>
+                        <div class="creativelab-text">CreativeLab</div>
+                    </div>
+                </div>
+                <div class="logo-info">
+                    <h3 class="logo-title">CreativeLab</h3>
+                    <p class="logo-description">Vibrant design studio logo with rotating shimmer effect and gradient text. Ideal for creative agencies and studios.</p>
+                    <div class="logo-tags">
+                        <span class="tag">Creative</span>
+                        <span class="tag">Vibrant</span>
+                        <span class="tag">Gradient</span>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="customizeLogo('creativelab')">Customize</button>
+                        <button class="btn btn-secondary" onclick="downloadLogo('creativelab')">Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DataVision -->
+            <div class="logo-card">
+                <div class="logo-display">
+                    <div class="datavision-logo">
+                        <div class="datavision-icon">DV</div>
+                        <div class="datavision-text">DataVision</div>
+                    </div>
+                </div>
+                <div class="logo-info">
+                    <h3 class="logo-title">DataVision</h3>
+                    <p class="logo-description">Professional analytics company logo with hexagonal icon and floating animation. Great for data and consulting firms.</p>
+                    <div class="logo-tags">
+                        <span class="tag">Analytics</span>
+                        <span class="tag">Professional</span>
+                        <span class="tag">Hexagon</span>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="customizeLogo('datavision')">Customize</button>
+                        <button class="btn btn-secondary" onclick="downloadLogo('datavision')">Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NeoStudio -->
+            <div class="logo-card">
+                <div class="logo-display">
+                    <div class="neostudio-logo">
+                        <div class="neostudio-icon">NS</div>
+                        <div class="neostudio-text">NeoStudio</div>
+                    </div>
+                </div>
+                <div class="logo-info">
+                    <h3 class="logo-title">NeoStudio</h3>
+                    <p class="logo-description">Fresh design studio logo with pill-shaped icon and light sweep animation. Perfect for modern creative businesses.</p>
+                    <div class="logo-tags">
+                        <span class="tag">Fresh</span>
+                        <span class="tag">Studio</span>
+                        <span class="tag">Light Effect</span>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="customizeLogo('neostudio')">Customize</button>
+                        <button class="btn btn-secondary" onclick="downloadLogo('neostudio')">Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PixelForge -->
+            <div class="logo-card">
+                <div class="logo-display">
+                    <div class="pixelforge-logo">
+                        <div class="pixelforge-icon"><span>PF</span></div>
+                        <div class="pixelforge-text">PixelForge</div>
+                    </div>
+                </div>
+                <div class="logo-info">
+                    <h3 class="logo-title">PixelForge</h3>
+                    <p class="logo-description">Dynamic creative logo with rotating diamond icon and gradient text. Excellent for digital design and development.</p>
+                    <div class="logo-tags">
+                        <span class="tag">Dynamic</span>
+                        <span class="tag">Digital</span>
+                        <span class="tag">Rotating</span>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="customizeLogo('pixelforge')">Customize</button>
+                        <button class="btn btn-secondary" onclick="downloadLogo('pixelforge')">Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FlowDesign -->
+            <div class="logo-card">
+                <div class="logo-display">
+                    <div class="flowdesign-logo">
+                        <div class="flowdesign-icon">FD</div>
+                        <div class="flowdesign-text">FlowDesign</div>
+                    </div>
+                </div>
+                <div class="logo-info">
+                    <h3 class="logo-title">FlowDesign</h3>
+                    <p class="logo-description">Elegant design agency logo with soft gradients and pulsing background effect. Ideal for UX/UI and brand design.</p>
+                    <div class="logo-tags">
+                        <span class="tag">Elegant</span>
+                        <span class="tag">UX/UI</span>
+                        <span class="tag">Soft</span>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="customizeLogo('flowdesign')">Customize</button>
+                        <button class="btn btn-secondary" onclick="downloadLogo('flowdesign')">Download</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customization Panel -->
+        <section class="custom-panel">
+            <h2 class="panel-title">Create Your Custom Logo</h2>
+            <div class="custom-controls">
+                <div class="control-group">
+                    <label class="control-label">Company Name</label>
+                    <input type="text" class="control-input" id="companyName" placeholder="Enter your company name" oninput="updatePreview()">
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Font Style</label>
+                    <select class="control-input" id="fontStyle" onchange="updatePreview()">
+                        <option value="Poppins">Poppins (Modern)</option>
+                        <option value="Montserrat">Montserrat (Bold)</option>
+                        <option value="Inter">Inter (Clean)</option>
+                        <option value="Nunito">Nunito (Friendly)</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Primary Color</label>
+                    <input type="color" class="control-input" id="primaryColor" value="#667eea" onchange="updatePreview()">
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Secondary Color</label>
+                    <input type="color" class="control-input" id="secondaryColor" value="#764ba2" onchange="updatePreview()">
+                </div>
+            </div>
+            <div class="live-preview">
+                <div class="preview-logo" id="previewLogo">YourBrand</div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section class="download-section">
+            <h2 class="download-title">Get Your Logo Package</h2>
+            <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-bottom: 30px;">
+                Professional logo files ready for immediate use
+            </p>
+            
+            <div class="download-grid">
+                <button class="download-btn" onclick="downloadAllLogos()">📦 Complete Package</button>
+                <button class="download-btn" onclick="downloadLogo('custom')">🎨 Custom Design</button>
+                <button class="download-btn" onclick="downloadLogo('vector')">📐 Vector Files</button>
+                <button class="download-btn" onclick="downloadLogo('brand')">📋 Brand Guidelines</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Update live preview
+        function updatePreview() {
+            const companyName = document.getElementById('companyName').value || 'YourBrand';
+            const fontStyle = document.getElementById('fontStyle').value;
+            const primaryColor = document.getElementById('primaryColor').value;
+            const secondaryColor = document.getElementById('secondaryColor').value;
+            
+            const previewLogo = document.getElementById('previewLogo');
+            previewLogo.textContent = companyName;
+            previewLogo.style.fontFamily = `'${fontStyle}', sans-serif`;
+            previewLogo.style.background = `linear-gradient(135deg, ${primaryColor}, ${secondaryColor})`;
+            previewLogo.style.webkitBackgroundClip = 'text';
+            previewLogo.style.webkitTextFillColor = 'transparent';
+            previewLogo.style.backgroundClip = 'text';
+        }
+
+        // Customize logo function
+        function customizeLogo(logoType) {
+            const customizations = {
+                'techflow': 'TechFlow style with blue gradient and modern typography',
+                'creativelab': 'CreativeLab style with pink-yellow gradient and circular icon',
+                'datavision': 'DataVision style with purple gradient and hexagonal shape',
+                'neostudio': 'NeoStudio style with green gradient and pill-shaped icon',
+                'pixelforge': 'PixelForge style with coral-teal gradient and diamond shape',
+                'flowdesign': 'FlowDesign style with soft pastels and elegant typography'
+            };
+
+            alert(`🎨 Customizing ${logoType.toUpperCase()}\n\n${customizations[logoType]}\n\nUse the custom panel below to create your personalized version with your company name and preferred colors!`);
+            
+            // Scroll to customization panel
+            document.querySelector('.custom-panel').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'center'
+            });
+        }
+
+        // Download logo function
+        function downloadLogo(logoType) {
+            // Create canvas for logo generation
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            canvas.width = 800;
+            canvas.height = 400;
+            
+            // Set background
+            ctx.fillStyle = '#f8fafc';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Logo configurations
+            const logos = {
+                'techflow': { text: 'TechFlow', color: '#4facfe' },
+                'creativelab': { text: 'CreativeLab', color: '#fa709a' },
+                'datavision': { text: 'DataVision', color: '#667eea' },
+                'neostudio': { text: 'NeoStudio', color: '#11998e' },
+                'pixelforge': { text: 'PixelForge', color: '#ff6b6b' },
+                'flowdesign': { text: 'FlowDesign', color: '#a8edea' },
+                'custom': { 
+                    text: document.getElementById('companyName').value || 'YourBrand', 
+                    color: document.getElementById('primaryColor').value 
+                }
+            };
+            
+            const config = logos[logoType] || logos['custom'];
+            
+            // Draw logo
+            ctx.fillStyle = config.color;
+            ctx.font = 'bold 60px Poppins, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(config.text, canvas.width / 2, canvas.height / 2);
+            
+            // Download
+            const link = document.createElement('a');
+            link.download = `${config.text.toLowerCase().replace(/\s+/g, '-')}-logo.png`;
+            link.href = canvas.toDataURL();
+            link.click();
+            
+            // Show success message
+            setTimeout(() => {
+                alert(`✅ ${config.text} logo downloaded successfully!\n\nThis is a preview version. For complete professional packages with vector files, brand guidelines, and multiple formats, please contact us!`);
+            }, 500);
+        }
+
+        // Download all logos
+        function downloadAllLogos() {
+            const logoTypes = ['techflow', 'creativelab', 'datavision', 'neostudio', 'pixelforge', 'flowdesign'];
+            
+            alert(`📦 Complete Logo Package\n\nDownloading ${logoTypes.length} professional logo designs!\n\nIncludes:\n• High-resolution PNG files\n• Vector formats (AI, EPS, SVG)\n• Brand color palettes\n• Usage guidelines\n• Multiple variations`);
+            
+            // Download each logo with a delay
+            logoTypes.forEach((logoType, index) => {
+                setTimeout(() => {
+                    downloadLogo(logoType);
+                }, index * 1000);
+            });
+        }
+
+        // Initialize preview
+        updatePreview();
+
+        // Add interactive effects
+        document.querySelectorAll('.logo-display').forEach(display => {
+            display.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+            });
+            
+            display.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+            
+            display.addEventListener('click', function() {
+                this.style.animation = 'pulse 0.6s ease';
+                setTimeout(() => {
+                    this.style.animation = '';
+                }, 600);
+            });
+        });
+
+        // Add pulse animation
+        const pulseStyle = document.createElement('style');
+        pulseStyle.textContent = `
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+                100% { transform: scale(1); }
+            }
+        `;
+        document.head.appendChild(pulseStyle);
+
+        // Smooth scrolling for any links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

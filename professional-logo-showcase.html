@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Logo Design Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #2d3748;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .hero-section {
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #4a5568 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%23ffffff" opacity="0.1"/><circle cx="80" cy="40" r="1.5" fill="%23ffffff" opacity="0.08"/><circle cx="60" cy="80" r="1" fill="%23ffffff" opacity="0.06"/></svg>') repeat;
+            background-size: 100px 100px;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.8;
+        }
+
+        /* Logo Categories */
+        .categories-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #718096;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Logo Grid */
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .logo-card {
+            background: #f7fafc;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .logo-card:hover::before {
+            left: 100%;
+        }
+
+        .logo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            border-color: #667eea;
+        }
+
+        .logo-preview {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 30px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-preview:hover {
+            transform: scale(1.05);
+        }
+
+        /* Logo Styles */
+        .logo-text {
+            font-weight: 800;
+            font-size: 2.5rem;
+            color: white;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        /* Different Logo Styles */
+        .gradient-logo {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .minimal-logo {
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+        }
+
+        .creative-logo {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+        }
+
+        .tech-logo {
+            background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+        }
+
+        .luxury-logo {
+            background: linear-gradient(135deg, #d4af37 0%, #ffd700 100%);
+            color: #1a202c !important;
+        }
+
+        .nature-logo {
+            background: linear-gradient(135deg, #56cc9d 0%, #6c5ce7 100%);
+        }
+
+        .corporate-logo {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        }
+
+        .vibrant-logo {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+        }
+
+        /* Logo Shapes */
+        .circle-logo {
+            border-radius: 50%;
+        }
+
+        .hexagon-logo {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+
+        .diamond-logo {
+            transform: rotate(45deg);
+            border-radius: 20px;
+        }
+
+        .diamond-logo .logo-text {
+            transform: rotate(-45deg);
+        }
+
+        /* Logo Details */
+        .logo-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 10px;
+        }
+
+        .logo-description {
+            color: #718096;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .logo-features {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .feature-tag {
+            background: #edf2f7;
+            color: #4a5568;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Interactive Elements */
+        .customize-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .customize-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Showcase Section */
+        .showcase-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .showcase-item {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .showcase-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .showcase-logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+        }
+
+        /* Industry Specific */
+        .tech-showcase { background: linear-gradient(135deg, #667eea, #764ba2); }
+        .finance-showcase { background: linear-gradient(135deg, #1a202c, #2d3748); }
+        .health-showcase { background: linear-gradient(135deg, #48bb78, #38a169); }
+        .creative-showcase { background: linear-gradient(135deg, #ed64a6, #d53f8c); }
+        .food-showcase { background: linear-gradient(135deg, #ff6b6b, #ee5a24); }
+        .luxury-showcase { background: linear-gradient(135deg, #d4af37, #ffd700); color: #1a202c !important; }
+
+        /* Download Section */
+        .download-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .download-package {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .download-package:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+
+        .package-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .package-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .package-features {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .package-features li {
+            padding: 5px 0;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .logo-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo-preview {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .logo-text {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Cursor */
+        .logo-preview {
+            cursor: pointer;
+        }
+
+        .logo-preview:hover {
+            cursor: grab;
+        }
+
+        .logo-preview:active {
+            cursor: grabbing;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Professional Logo Design</h1>
+                <p class="hero-subtitle">Crafting memorable brand identities that make an impact</p>
+                <p class="hero-description">
+                    Discover a collection of professionally designed logos across various industries and styles. 
+                    Each design is carefully crafted to represent excellence, professionalism, and brand distinction.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Categories -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Premium Logo Collection</h2>
+                <p class="section-subtitle">
+                    Choose from our carefully curated selection of professional logos, each designed to elevate your brand presence
+                </p>
+            </div>
+
+            <div class="logo-grid">
+                <!-- Gradient Modern -->
+                <div class="logo-card fade-in">
+                    <div class="logo-preview gradient-logo circle-logo">
+                        <div class="logo-text">ΠX</div>
+                        <div class="logo-icon">✦</div>
+                    </div>
+                    <h3 class="logo-title">Gradient Modern</h3>
+                    <p class="logo-description">
+                        Contemporary gradient design perfect for tech startups and digital agencies. 
+                        Features smooth transitions and modern typography.
+                    </p>
+                    <div class="logo-features">
+                        <span class="feature-tag">Modern</span>
+                        <span class="feature-tag">Tech</span>
+                        <span class="feature-tag">Scalable</span>
+                    </div>
+                    <button class="customize-btn" onclick="customizeLogo('gradient-modern')">Customize</button>
+                </div>
+
+                <!-- Minimal Corporate -->
+                <div class="logo-card fade-in">
+                    <div class="logo-preview minimal-logo">
+                        <div class="logo-text">APEX</div>
+                        <div class="logo-icon">▲</div>
+                    </div>
+                    <h3 class="logo-title">Minimal Corporate</h3>
+                    <p class="logo-description">
+                        Clean, professional design ideal for consulting firms and corporate businesses. 
+                        Emphasizes trust and reliability.
+                    </p>
+                    <div class="logo-features">
+                        <span class="feature-tag">Corporate</span>
+                        <span class="feature-tag">Clean</span>
+                        <span class="feature-tag">Professional</span>
+                    </div>
+                    <button class="customize-btn" onclick="customizeLogo('minimal-corporate')">Customize</button>
+                </div>
+
+                <!-- Creative Agency -->
+                <div class="logo-card fade-in">
+                    <div class="logo-preview creative-logo hexagon-logo">
+                        <div class="logo-text">FLUX</div>
+                        <div class="logo-icon">◆</div>
+                    </div>
+                    <h3 class="logo-title">Creative Agency</h3>
+                    <p class="logo-description">
+                        Bold and vibrant design for creative agencies and design studios. 
+                        Captures innovation and artistic expression.
+                    </p>
+                    <div class="logo-features">
+                        <span class="feature-tag">Creative</span>
+                        <span class="feature-tag">Bold</span>
+                        <span class="feature-tag">Artistic</span>
+                    </div>
+                    <button class="customize-btn" onclick="customizeLogo('creative-agency')">Customize</button>
+                </div>
+
+                <!-- Tech Innovation -->
+                <div class="logo-card fade-in">
+                    <div class="logo-preview tech-logo diamond-logo">
+                        <div class="logo-text">NOVA</div>
+                        <div class="logo-icon">⬟</div>
+                    </div>
+                    <h3 class="logo-title">Tech Innovation</h3>
+                    <p class="logo-description">
+                        Futuristic design perfect for software companies and tech innovators. 
+                        Represents cutting-edge technology and progress.
+                    </p>
+                    <div class="logo-features">
+                        <span class="feature-tag">Futuristic</span>
+                        <span class="feature-tag">Innovation</span>
+                        <span class="feature-tag">Digital</span>
+                    </div>
+                    <button class="customize-btn" onclick="customizeLogo('tech-innovation')">Customize</button>
+                </div>
+
+                <!-- Luxury Brand -->
+                <div class="logo-card fade-in">
+                    <div class="logo-preview luxury-logo circle-logo">
+                        <div class="logo-text">LUXE</div>
+                        <div class="logo-icon">◊</div>
+                    </div>
+                    <h3 class="logo-title">Luxury Brand</h3>
+                    <p class="logo-description">
+                        Elegant gold design for luxury brands and premium services. 
+                        Conveys exclusivity and high-end quality.
+                    </p>
+                    <div class="logo-features">
+                        <span class="feature-tag">Luxury</span>
+                        <span class="feature-tag">Premium</span>
+                        <span class="feature-tag">Elegant</span>
+                    </div>
+                    <button class="customize-btn" onclick="customizeLogo('luxury-brand')">Customize</button>
+                </div>
+
+                <!-- Nature & Wellness -->
+                <div class="logo-card fade-in">
+                    <div class="logo-preview nature-logo">
+                        <div class="logo-text">VITA</div>
+                        <div class="logo-icon">🌿</div>
+                    </div>
+                    <h3 class="logo-title">Nature & Wellness</h3>
+                    <p class="logo-description">
+                        Organic design perfect for health, wellness, and eco-friendly brands. 
+                        Represents growth and natural harmony.
+                    </p>
+                    <div class="logo-features">
+                        <span class="feature-tag">Organic</span>
+                        <span class="feature-tag">Wellness</span>
+                        <span class="feature-tag">Eco-friendly</span>
+                    </div>
+                    <button class="customize-btn" onclick="customizeLogo('nature-wellness')">Customize</button>
+                </div>
+
+                <!-- Corporate Professional -->
+                <div class="logo-card fade-in">
+                    <div class="logo-preview corporate-logo">
+                        <div class="logo-text">PRIME</div>
+                        <div class="logo-icon">■</div>
+                    </div>
+                    <h3 class="logo-title">Corporate Professional</h3>
+                    <p class="logo-description">
+                        Authoritative design for financial institutions and professional services. 
+                        Builds trust and credibility.
+                    </p>
+                    <div class="logo-features">
+                        <span class="feature-tag">Authoritative</span>
+                        <span class="feature-tag">Financial</span>
+                        <span class="feature-tag">Trustworthy</span>
+                    </div>
+                    <button class="customize-btn" onclick="customizeLogo('corporate-professional')">Customize</button>
+                </div>
+
+                <!-- Vibrant Creative -->
+                <div class="logo-card fade-in">
+                    <div class="logo-preview vibrant-logo circle-logo">
+                        <div class="logo-text">BLOOM</div>
+                        <div class="logo-icon">✨</div>
+                    </div>
+                    <h3 class="logo-title">Vibrant Creative</h3>
+                    <p class="logo-description">
+                        Colorful and energetic design for lifestyle brands and creative ventures. 
+                        Captures joy and positive energy.
+                    </p>
+                    <div class="logo-features">
+                        <span class="feature-tag">Vibrant</span>
+                        <span class="feature-tag">Lifestyle</span>
+                        <span class="feature-tag">Energetic</span>
+                    </div>
+                    <button class="customize-btn" onclick="customizeLogo('vibrant-creative')">Customize</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Showcase -->
+    <section class="showcase-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Industry Applications</h2>
+                <p class="section-subtitle">
+                    See how our professional logos adapt across different industries and business sectors
+                </p>
+            </div>
+
+            <div class="showcase-grid">
+                <div class="showcase-item fade-in">
+                    <div class="showcase-logo tech-showcase">TECH</div>
+                    <h4>Technology</h4>
+                    <p>Software, AI, Fintech, SaaS</p>
+                </div>
+
+                <div class="showcase-item fade-in">
+                    <div class="showcase-logo finance-showcase">FIN</div>
+                    <h4>Finance</h4>
+                    <p>Banking, Investment, Insurance</p>
+                </div>
+
+                <div class="showcase-item fade-in">
+                    <div class="showcase-logo health-showcase">CARE</div>
+                    <h4>Healthcare</h4>
+                    <p>Medical, Wellness, Pharmaceuticals</p>
+                </div>
+
+                <div class="showcase-item fade-in">
+                    <div class="showcase-logo creative-showcase">ART</div>
+                    <h4>Creative</h4>
+                    <p>Design, Media, Entertainment</p>
+                </div>
+
+                <div class="showcase-item fade-in">
+                    <div class="showcase-logo food-showcase">FOOD</div>
+                    <h4>Food & Beverage</h4>
+                    <p>Restaurants, Catering, Hospitality</p>
+                </div>
+
+                <div class="showcase-item fade-in">
+                    <div class="showcase-logo luxury-showcase">LUX</div>
+                    <h4>Luxury</h4>
+                    <p>Fashion, Jewelry, Premium Services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Packages -->
+    <section class="download-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">Professional Logo Packages</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">
+                    Complete branding solutions with everything you need to establish your professional identity
+                </p>
+            </div>
+
+            <div class="download-grid">
+                <div class="download-package fade-in">
+                    <h3 class="package-title">Starter Package</h3>
+                    <div class="package-price">$299</div>
+                    <ul class="package-features">
+                        <li>✓ 3 Logo concepts</li>
+                        <li>✓ 2 Revisions included</li>
+                        <li>✓ PNG & JPG files</li>
+                        <li>✓ Basic style guide</li>
+                        <li>✓ 7-day delivery</li>
+                    </ul>
+                    <button class="download-btn" onclick="selectPackage('starter')">Get Started</button>
+                </div>
+
+                <div class="download-package fade-in">
+                    <h3 class="package-title">Professional Package</h3>
+                    <div class="package-price">$599</div>
+                    <ul class="package-features">
+                        <li>✓ 5 Logo concepts</li>
+                        <li>✓ Unlimited revisions</li>
+                        <li>✓ Vector files (AI, EPS, SVG)</li>
+                        <li>✓ Complete brand guidelines</li>
+                        <li>✓ Business card design</li>
+                        <li>✓ 5-day delivery</li>
+                    </ul>
+                    <button class="download-btn" onclick="selectPackage('professional')">Choose Professional</button>
+                </div>
+
+                <div class="download-package fade-in">
+                    <h3 class="package-title">Premium Package</h3>
+                    <div class="package-price">$999</div>
+                    <ul class="package-features">
+                        <li>✓ 8 Logo concepts</li>
+                        <li>✓ Unlimited revisions</li>
+                        <li>✓ Complete file package</li>
+                        <li>✓ Brand strategy consultation</li>
+                        <li>✓ Stationery suite design</li>
+                        <li>✓ Social media assets</li>
+                        <li>✓ 3-day delivery</li>
+                    </ul>
+                    <button class="download-btn" onclick="selectPackage('premium')">Go Premium</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Logo customization function
+        function customizeLogo(logoType) {
+            const customizations = {
+                'gradient-modern': {
+                    name: 'Gradient Modern',
+                    colors: ['#667eea', '#764ba2'],
+                    fonts: ['Montserrat', 'Poppins', 'Inter'],
+                    shapes: ['Circle', 'Square', 'Hexagon']
+                },
+                'minimal-corporate': {
+                    name: 'Minimal Corporate',
+                    colors: ['#1a202c', '#2d3748'],
+                    fonts: ['Playfair Display', 'Inter', 'Montserrat'],
+                    shapes: ['Rectangle', 'Square', 'Circle']
+                },
+                'creative-agency': {
+                    name: 'Creative Agency',
+                    colors: ['#ff6b6b', '#ee5a24'],
+                    fonts: ['Poppins', 'Montserrat', 'Inter'],
+                    shapes: ['Hexagon', 'Diamond', 'Circle']
+                },
+                // Add more customization options...
+            };
+
+            const config = customizations[logoType] || customizations['gradient-modern'];
+            
+            // Create customization modal
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.8);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+                animation: fadeIn 0.3s ease;
+            `;
+
+            modal.innerHTML = `
+                <div style="
+                    background: white;
+                    border-radius: 20px;
+                    padding: 40px;
+                    max-width: 500px;
+                    width: 90%;
+                    text-align: center;
+                    transform: scale(0.8);
+                    animation: scaleIn 0.3s ease forwards;
+                ">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 20px; color: #1a202c;">
+                        Customize ${config.name}
+                    </h3>
+                    <p style="color: #718096; margin-bottom: 30px;">
+                        Choose your preferred colors, fonts, and shapes for your professional logo.
+                    </p>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="margin-bottom: 10px;">Colors</h4>
+                        <div style="display: flex; justify-content: center; gap: 10px;">
+                            ${config.colors.map(color => `
+                                <div style="
+                                    width: 40px;
+                                    height: 40px;
+                                    background: ${color};
+                                    border-radius: 50%;
+                                    cursor: pointer;
+                                    border: 3px solid #e2e8f0;
+                                "></div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="margin-bottom: 10px;">Fonts</h4>
+                        <select style="
+                            padding: 10px 15px;
+                            border-radius: 8px;
+                            border: 1px solid #e2e8f0;
+                            width: 200px;
+                        ">
+                            ${config.fonts.map(font => `<option value="${font}">${font}</option>`).join('')}
+                        </select>
+                    </div>
+                    
+                    <div style="display: flex; gap: 15px; justify-content: center; margin-top: 30px;">
+                        <button onclick="generateLogo('${logoType}')" style="
+                            background: linear-gradient(135deg, #667eea, #764ba2);
+                            color: white;
+                            border: none;
+                            padding: 12px 24px;
+                            border-radius: 25px;
+                            font-weight: 600;
+                            cursor: pointer;
+                        ">Generate Logo</button>
+                        <button onclick="this.closest('.modal').remove()" style="
+                            background: #e2e8f0;
+                            color: #4a5568;
+                            border: none;
+                            padding: 12px 24px;
+                            border-radius: 25px;
+                            font-weight: 600;
+                            cursor: pointer;
+                        ">Cancel</button>
+                    </div>
+                </div>
+            `;
+
+            modal.className = 'modal';
+            document.body.appendChild(modal);
+
+            // Add CSS animations
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+                @keyframes scaleIn {
+                    from { transform: scale(0.8); }
+                    to { transform: scale(1); }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        // Generate logo function
+        function generateLogo(logoType) {
+            // Create canvas for logo generation
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            canvas.width = 400;
+            canvas.height = 400;
+            
+            // Create gradient based on logo type
+            const gradients = {
+                'gradient-modern': ['#667eea', '#764ba2'],
+                'minimal-corporate': ['#1a202c', '#2d3748'],
+                'creative-agency': ['#ff6b6b', '#ee5a24'],
+                'tech-innovation': ['#00d2ff', '#3a7bd5'],
+                'luxury-brand': ['#d4af37', '#ffd700'],
+                'nature-wellness': ['#56cc9d', '#6c5ce7'],
+                'corporate-professional': ['#2c3e50', '#34495e'],
+                'vibrant-creative': ['#ff9a9e', '#fecfef']
+            };
+
+            const colors = gradients[logoType] || gradients['gradient-modern'];
+            const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            gradient.addColorStop(0, colors[0]);
+            gradient.addColorStop(1, colors[1]);
+            
+            // Draw background
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Add logo text
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 80px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
+            const logoTexts = {
+                'gradient-modern': 'ΠX',
+                'minimal-corporate': 'APEX',
+                'creative-agency': 'FLUX',
+                'tech-innovation': 'NOVA',
+                'luxury-brand': 'LUXE',
+                'nature-wellness': 'VITA',
+                'corporate-professional': 'PRIME',
+                'vibrant-creative': 'BLOOM'
+            };
+            
+            const text = logoTexts[logoType] || 'LOGO';
+            ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+            
+            // Download the logo
+            const link = document.createElement('a');
+            link.download = `professional-logo-${logoType}.png`;
+            link.href = canvas.toDataURL();
+            link.click();
+            
+            // Close modal
+            document.querySelector('.modal')?.remove();
+            
+            // Show success message
+            setTimeout(() => {
+                alert(`✅ ${text} logo generated successfully!\n\nThis is a preview version. For the complete professional package with vector files and brand guidelines, please select one of our packages below.`);
+            }, 500);
+        }
+
+        // Package selection function
+        function selectPackage(packageType) {
+            const packages = {
+                'starter': {
+                    name: 'Starter Package',
+                    price: '$299',
+                    features: ['3 Logo concepts', '2 Revisions', 'PNG & JPG files', 'Basic style guide']
+                },
+                'professional': {
+                    name: 'Professional Package',
+                    price: '$599',
+                    features: ['5 Logo concepts', 'Unlimited revisions', 'Vector files', 'Complete brand guidelines']
+                },
+                'premium': {
+                    name: 'Premium Package',
+                    price: '$999',
+                    features: ['8 Logo concepts', 'Complete branding suite', 'Priority support', 'Rush delivery']
+                }
+            };
+
+            const selected = packages[packageType];
+            
+            alert(`🎯 Great choice!\n\n${selected.name} - ${selected.price}\n\nIncludes:\n${selected.features.map(f => `• ${f}`).join('\n')}\n\nTo proceed with your professional logo design, please contact us to discuss your specific requirements and brand vision.`);
+        }
+
+        // Add interactive hover effects to logo previews
+        document.querySelectorAll('.logo-preview').forEach(preview => {
+            preview.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05) rotate(2deg)';
+            });
+            
+            preview.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotate(0deg)';
+            });
+            
+            preview.addEventListener('click', function() {
+                this.style.animation = 'pulse 0.6s ease';
+                setTimeout(() => {
+                    this.style.animation = '';
+                }, 600);
+            });
+        });
+
+        // Add pulse animation
+        const pulseStyle = document.createElement('style');
+        pulseStyle.textContent = `
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+                100% { transform: scale(1); }
+            }
+        `;
+        document.head.appendChild(pulseStyle);
+
+        // Add smooth scrolling for any navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

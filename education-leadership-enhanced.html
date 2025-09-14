@@ -1,0 +1,1649 @@
+# Education Leadership Services - Complete Website Transformation Proposal
+
+## Executive Summary
+
+I will transform your Education Leadership Services website into a comprehensive corporate-grade platform with integrated booking, payment processing, and review management - all built within the Kartra ecosystem you're already using.
+
+## Current Site Analysis
+
+**Strengths:**
+- Clear value proposition for educator coaching
+- Strong testimonials from superintendents and principals
+- Existing Kartra integration
+- Professional service focus
+
+**Areas for Enhancement:**
+- No integrated booking system
+- Limited service visibility and organization
+- Missing payment processing at point of booking
+- No review/feedback system for clients
+- Basic visual design needs corporate polish
+- Mobile experience needs optimization
+
+## Proposed Solution Architecture
+
+### **Platform: Kartra All-in-One**
+Since you're already on Kartra, we'll leverage their complete ecosystem:
+
+**Core Kartra Components:**
+- **Kartra Pages**: Custom-designed responsive pages
+- **Kartra Calendar**: Advanced booking system with availability management
+- **Kartra Checkout**: Secure payment processing
+- **Kartra Memberships**: Client portal for post-service reviews
+- **Kartra Email**: Automated booking confirmations and follow-ups
+- **Kartra Analytics**: Performance tracking and insights
+- **Kartra Forms**: Lead capture and service inquiries
+
+## Technical Implementation Plan
+
+### **Phase 1: Design & Content Strategy (Week 1-2)**
+
+**Corporate Design System:**
+- Refined color palette: Deep navy (#1e3a5f), professional teal (#2c7873), warm gray (#f8f9fa)
+- Typography: Modern, readable fonts (Montserrat headings, Open Sans body)
+- Consistent spacing, button styles, and visual hierarchy
+- Professional photography integration
+- Trust indicators and credibility elements
+
+**Site Architecture:**
+```
+Homepage
+├── Services Overview
+│   ├── Virtual Coaching (1:1)
+│   ├── Professional Development Workshops
+│   ├── Roadmap to Rigorous Instruction
+│   └── Custom Training Programs
+├── Booking System
+│   ├── Service Selection
+│   ├── Calendar Integration
+│   ├── Coach Selection
+│   └── Payment Processing
+├── About Us
+├── Client Success Stories
+├── Resources & Blog
+└── Contact
+```
+
+### **Phase 2: Booking System Integration (Week 3-4)**
+
+**Kartra Calendar Features:**
+- Real-time availability display
+- Multi-coach scheduling
+- Time zone management
+- Automated buffer times
+- Recurring appointment options
+- Waiting list functionality
+
+**Booking Flow:**
+1. Service selection with detailed descriptions
+2. Coach preference (if applicable)
+3. Calendar view with available slots
+4. Client information collection
+5. Payment processing
+6. Automated confirmations
+
+**Payment Integration:**
+- Kartra's native payment processing
+- Multiple payment options (cards, PayPal)
+- Flexible pricing (hourly, package deals, retainers)
+- Automatic invoicing and receipts
+- Secure PCI-compliant processing
+
+### **Phase 3: Review & Client Portal (Week 5)**
+
+**Post-Service Review System:**
+- Automated review requests via Kartra email sequences
+- Client portal access through Kartra Memberships
+- Structured feedback forms
+- Moderation dashboard for review approval
+- Display of verified reviews on service pages
+- Response system for client feedback
+
+**Client Portal Features:**
+- Appointment history
+- Session notes and resources
+- Upcoming bookings management
+- Review submission interface
+- Payment history and invoices
+
+### **Phase 4: Content Management & SEO (Week 6)**
+
+**Easy Content Updates:**
+- Kartra's visual page editor for service updates
+- Template-based service pages for consistency
+- FAQ management system
+- Blog integration for thought leadership
+- Resource library management
+
+**SEO Optimization:**
+- Optimized page titles and meta descriptions
+- Schema markup for local business and services
+- Internal linking strategy
+- Fast-loading image optimization
+- Mobile-first responsive design
+- SSL certificate (included with Kartra hosting)
+
+## Detailed Feature Specifications
+
+### **Enhanced Booking System**
+
+**Calendar Integration:**
+```
+Features:
+- Multi-calendar view (day/week/month)
+- Real-time availability updates
+- Automated scheduling confirmations
+- Buffer time between appointments
+- Recurring session booking
+- Group session management
+- Waitlist functionality
+- Time zone detection and conversion
+```
+
+**Service Packages:**
+```
+1. Individual Coaching Sessions
+   - 60-minute sessions
+   - 90-minute intensive sessions
+   - Multi-session packages (5, 10, 15 sessions)
+
+2. Workshop Bookings
+   - Half-day workshops
+   - Full-day training
+   - Multi-day programs
+   - Custom group sizes
+
+3. Consultation Services
+   - Initial assessment calls
+   - Strategic planning sessions
+   - Follow-up reviews
+```
+
+### **Review & Testimonial System**
+
+**Automated Review Collection:**
+- Post-service email sequence (24-48 hours after completion)
+- SMS follow-up option
+- In-portal review prompts
+- Incentivized feedback collection
+
+**Review Management:**
+- Admin moderation dashboard
+- Response management system
+- Review display controls
+- Export functionality for marketing use
+
+### **Professional Service Pages**
+
+**Service Detail Pages Include:**
+- Comprehensive service descriptions
+- Coach profiles and credentials
+- Pricing transparency
+- Expected outcomes
+- Booking calendar integration
+- Related resources
+- Client testimonials specific to each service
+
+## Visual Design Mockup
+
+Let me create a professional mockup of your enhanced website:
+
+<function_calls>
+<invoke name="create_file">
+<parameter name="content"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Leadership Services - Professional Development & Coaching</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-navy: #1e3a5f;
+            --secondary-teal: #2c7873;
+            --accent-gold: #d4af37;
+            --neutral-gray: #f8f9fa;
+            --text-dark: #2c3e50;
+            --text-light: #6c757d;
+            --white: #ffffff;
+            --success: #28a745;
+            --border-light: #e9ecef;
+            --glass-bg: rgba(255, 255, 255, 0.25);
+            --glass-border: rgba(255, 255, 255, 0.18);
+        }
+
+        /* Advanced Glass Morphism */
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+        }
+
+        /* Interactive Particles Background */
+        .particles-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: linear-gradient(45deg, var(--secondary-teal), var(--accent-gold));
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float-particle 20s infinite linear;
+        }
+
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.1;
+            }
+            90% {
+                opacity: 0.1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Advanced Loading Animation */
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-navy), var(--secondary-teal));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .page-loader.loaded {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-content {
+            text-align: center;
+            color: white;
+        }
+
+        .loader-logo {
+            width: 80px;
+            height: 80px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-navy);
+            animation: pulse-loader 2s infinite;
+        }
+
+        @keyframes pulse-loader {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .loader-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .loader-progress {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .loader-bar {
+            height: 100%;
+            background: var(--accent-gold);
+            width: 0%;
+            animation: load-progress 3s ease-in-out forwards;
+        }
+
+        @keyframes load-progress {
+            0% { width: 0%; }
+            50% { width: 70%; }
+            100% { width: 100%; }
+        }
+
+        body {
+            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Advanced Header with Glass Effect */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .header.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 12px 40px rgba(31, 38, 135, 0.15);
+            transform: translateY(0);
+        }
+
+        .header.hidden {
+            transform: translateY(-100%);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: var(--primary-navy);
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-navy), var(--secondary-teal));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .logo-icon::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: rotate(45deg) translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .logo:hover .logo-icon::before {
+            transform: rotate(45deg) translateX(100%);
+        }
+
+        .logo:hover .logo-icon {
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: 0 8px 25px rgba(30, 58, 95, 0.3);
+        }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .logo-text h1 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .logo-text p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--secondary-teal);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-teal);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--secondary-teal), var(--primary-navy));
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 4px 15px rgba(44, 120, 115, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 30px rgba(44, 120, 115, 0.5);
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px) scale(0.98);
+        }
+
+        /* Advanced Hero Section with 3D Effects */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-teal) 100%);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(44, 120, 115, 0.1) 0%, transparent 50%);
+            animation: gradient-shift 10s ease-in-out infinite;
+        }
+
+        @keyframes gradient-shift {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%23ffffff" opacity="0.1"/><circle cx="80" cy="40" r="1.5" fill="%23d4af37" opacity="0.1"/><circle cx="60" cy="80" r="1" fill="%23ffffff" opacity="0.1"/></svg>') repeat;
+            background-size: 100px 100px;
+            animation: pattern-move 30s linear infinite;
+        }
+
+        @keyframes pattern-move {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(100px, 100px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideInUp 1s ease 0.5s forwards;
+            background: linear-gradient(135deg, #ffffff, var(--accent-gold));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes slideInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--accent-gold);
+            color: var(--primary-navy);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 15px 30px;
+            border: 2px solid white;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-navy);
+        }
+
+        /* Stats Section */
+        /* Interactive Stats Section */
+        .stats-section {
+            background: var(--neutral-gray);
+            padding: 60px 0;
+            margin-top: -50px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 0%, rgba(44, 120, 115, 0.05) 50%, transparent 100%);
+            animation: stats-shimmer 8s ease-in-out infinite;
+        }
+
+        @keyframes stats-shimmer {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(44, 120, 115, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .stat-card:hover::before {
+            left: 100%;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 
+                0 20px 60px rgba(31, 38, 135, 0.2),
+                0 0 0 1px rgba(44, 120, 115, 0.1);
+        }
+
+        .stat-card:hover .stat-number {
+            transform: scale(1.1);
+            text-shadow: 0 0 20px rgba(44, 120, 115, 0.3);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary-teal);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid var(--border-light);
+            border-radius: 25px;
+            padding: 2.5rem;
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transform-style: preserve-3d;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary-teal), var(--primary-navy));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(44, 120, 115, 0.05) 0%, 
+                rgba(30, 58, 95, 0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover::after {
+            opacity: 1;
+        }
+
+        .service-card:hover {
+            box-shadow: 
+                0 25px 60px rgba(31, 38, 135, 0.15),
+                0 0 0 1px rgba(44, 120, 115, 0.1);
+            transform: translateY(-15px) rotateX(5deg) rotateY(2deg);
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 10px 30px rgba(44, 120, 115, 0.3);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--secondary-teal), var(--primary-navy));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: white;
+            position: relative;
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 8px 25px rgba(44, 120, 115, 0.2);
+        }
+
+        .service-icon::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(45deg, var(--accent-gold), var(--secondary-teal), var(--primary-navy));
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-card:hover .service-icon::before {
+            opacity: 1;
+            animation: rotate-border 2s linear infinite;
+        }
+
+        @keyframes rotate-border {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: var(--text-dark);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .book-service-btn {
+            background: var(--secondary-teal);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-align: center;
+        }
+
+        .book-service-btn:hover {
+            background: var(--primary-navy);
+            transform: translateY(-2px);
+        }
+
+        /* Interactive Booking Section */
+        .booking-section {
+            background: var(--neutral-gray);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .booking-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 30% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(44, 120, 115, 0.05) 0%, transparent 50%);
+        }
+
+        .booking-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 3rem;
+            box-shadow: 
+                0 20px 60px rgba(31, 38, 135, 0.15),
+                0 0 0 1px rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .booking-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--secondary-teal), var(--accent-gold), var(--primary-navy));
+            background-size: 200% 100%;
+            animation: gradient-flow 3s ease-in-out infinite;
+        }
+
+        @keyframes gradient-flow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .booking-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .booking-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent-gold), #b8941f);
+            color: var(--primary-navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .booking-step h3 {
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .booking-step p {
+            color: var(--text-light);
+        }
+
+        /* Calendar Preview */
+        .calendar-preview {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+            border: 1px solid var(--border-light);
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .calendar-nav {
+            background: var(--secondary-teal);
+            color: white;
+            border: none;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .calendar-nav:hover {
+            background: var(--primary-navy);
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1px;
+            background: var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .calendar-day {
+            background: white;
+            padding: 1rem 0.5rem;
+            text-align: center;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .calendar-day:hover {
+            background: var(--neutral-gray);
+        }
+
+        .calendar-day.available {
+            background: rgba(44, 120, 115, 0.1);
+            color: var(--secondary-teal);
+            font-weight: 600;
+        }
+
+        .calendar-day.selected {
+            background: var(--secondary-teal);
+            color: white;
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .review-card {
+            background: var(--neutral-gray);
+            border-radius: 15px;
+            padding: 2rem;
+            position: relative;
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        .review-rating {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+
+        .star {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .reviewer-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--secondary-teal), var(--primary-navy));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .reviewer-details h4 {
+            color: var(--primary-navy);
+            margin-bottom: 0.25rem;
+        }
+
+        .reviewer-details p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Trust Indicators */
+        .trust-section {
+            background: var(--primary-navy);
+            color: white;
+            padding: 60px 0;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .trust-item {
+            text-align: center;
+        }
+
+        .trust-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 2rem;
+            text-align: center;
+            color: #999;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .services-grid,
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .service-card,
+            .booking-container {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        /* Demo Badge */
+        .demo-badge {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: var(--accent-gold);
+            color: var(--primary-navy);
+            padding: 10px 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            z-index: 1001;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-badge">🎨 ENHANCED MOCKUP</div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-container">
+                <a href="#" class="logo">
+                    <div class="logo-icon">ELS</div>
+                    <div class="logo-text">
+                        <h1>Education Leadership Services</h1>
+                        <p>Professional Development & Coaching</p>
+                    </div>
+                </a>
+                
+                <nav class="nav-menu">
+                    <a href="#services">Services</a>
+                    <a href="#booking">Book Now</a>
+                    <a href="#about">About</a>
+                    <a href="#reviews">Reviews</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+
+                <a href="#booking" class="cta-button">Schedule Consultation</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Empowering Educators Through Professional Coaching</h1>
+                <p>Transform your educational leadership with personalized virtual coaching, research-based workshops, and ongoing professional development designed for sustainable success.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#booking" class="btn-primary">Book Your Session</a>
+                    <a href="#services" class="btn-secondary">Explore Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">Client Retention Rate</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Educators Coached</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Support Available</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Professional Development Services</h2>
+                <p>Comprehensive coaching solutions designed to meet the unique needs of educational leaders and classroom educators.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">👨‍🏫</div>
+                    <h3>1:1 Virtual Coaching</h3>
+                    <p>Personalized coaching sessions focused on your specific leadership challenges and professional growth goals.</p>
+                    
+                    <ul class="service-features">
+                        <li>Weekly or bi-weekly sessions</li>
+                        <li>Customized goal setting</li>
+                        <li>Real-time feedback and support</li>
+                        <li>Flexible scheduling options</li>
+                        <li>Multiple communication platforms</li>
+                    </ul>
+                    
+                    <a href="#booking" class="book-service-btn">Book Coaching Session</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📚</div>
+                    <h3>Professional Development Workshops</h3>
+                    <p>Research-based workshops designed to enhance instructional practices and leadership effectiveness.</p>
+                    
+                    <ul class="service-features">
+                        <li>In-person and virtual options</li>
+                        <li>Customized content delivery</li>
+                        <li>Interactive learning experiences</li>
+                        <li>Follow-up support included</li>
+                        <li>Group and individual formats</li>
+                    </ul>
+                    
+                    <a href="#booking" class="book-service-btn">Schedule Workshop</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Rigorous Instruction Course</h3>
+                    <p>Comprehensive mini-course focused on implementing rigorous instructional practices for improved student outcomes.</p>
+                    
+                    <ul class="service-features">
+                        <li>Self-paced learning modules</li>
+                        <li>Practical implementation guides</li>
+                        <li>Assessment tools included</li>
+                        <li>Ongoing support community</li>
+                        <li>Certificate of completion</li>
+                    </ul>
+                    
+                    <a href="#booking" class="book-service-btn">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <div class="booking-container">
+                <div class="section-header">
+                    <h2>Book Your Professional Development Session</h2>
+                    <p>Simple, secure booking with real-time availability and instant confirmation.</p>
+                </div>
+
+                <div class="booking-steps">
+                    <div class="booking-step">
+                        <div class="step-number">1</div>
+                        <h3>Choose Service</h3>
+                        <p>Select the coaching or workshop service that best fits your needs.</p>
+                    </div>
+                    <div class="booking-step">
+                        <div class="step-number">2</div>
+                        <h3>Pick Time</h3>
+                        <p>Choose from available time slots that work with your schedule.</p>
+                    </div>
+                    <div class="booking-step">
+                        <div class="step-number">3</div>
+                        <h3>Secure Payment</h3>
+                        <p>Complete booking with secure payment and receive instant confirmation.</p>
+                    </div>
+                </div>
+
+                <!-- Calendar Preview -->
+                <div class="calendar-preview">
+                    <div class="calendar-header">
+                        <button class="calendar-nav">‹</button>
+                        <h3>December 2025</h3>
+                        <button class="calendar-nav">›</button>
+                    </div>
+                    
+                    <div class="calendar-grid">
+                        <div class="calendar-day">Sun</div>
+                        <div class="calendar-day">Mon</div>
+                        <div class="calendar-day">Tue</div>
+                        <div class="calendar-day">Wed</div>
+                        <div class="calendar-day">Thu</div>
+                        <div class="calendar-day">Fri</div>
+                        <div class="calendar-day">Sat</div>
+                        
+                        <div class="calendar-day">1</div>
+                        <div class="calendar-day available">2</div>
+                        <div class="calendar-day available">3</div>
+                        <div class="calendar-day">4</div>
+                        <div class="calendar-day available">5</div>
+                        <div class="calendar-day">6</div>
+                        <div class="calendar-day">7</div>
+                        
+                        <div class="calendar-day">8</div>
+                        <div class="calendar-day available">9</div>
+                        <div class="calendar-day selected">10</div>
+                        <div class="calendar-day">11</div>
+                        <div class="calendar-day available">12</div>
+                        <div class="calendar-day">13</div>
+                        <div class="calendar-day">14</div>
+                        
+                        <div class="calendar-day">15</div>
+                        <div class="calendar-day available">16</div>
+                        <div class="calendar-day available">17</div>
+                        <div class="calendar-day">18</div>
+                        <div class="calendar-day available">19</div>
+                        <div class="calendar-day">20</div>
+                        <div class="calendar-day">21</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Client Success Stories</h2>
+                <p>Hear from educational leaders who have transformed their practice through our professional development services.</p>
+            </div>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="review-text">"The virtual coaching sessions were transformative for our district. The flexibility and personalized approach helped our principals develop the skills they needed while managing their busy schedules."</p>
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">KH</div>
+                        <div class="reviewer-details">
+                            <h4>Dr. Kenneth Hamilton</h4>
+                            <p>Superintendent, Mt. Vernon City Schools</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="review-text">"My staff found the conversations rewarding and relevant to their current classroom needs. The individualized approach really made a difference in their professional growth."</p>
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">SN</div>
+                        <div class="reviewer-details">
+                            <h4>Dr. Sharon Nepote</h4>
+                            <p>Principal, Wagoner Elementary</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="review-text">"The professional development workshops were expertly facilitated and directly applicable to our school's needs. I look forward to continuing this partnership."</p>
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">JC</div>
+                        <div class="reviewer-details">
+                            <h4>Dr. Jennifer Camilleri</h4>
+                            <p>Principal, Strassburg Elementary</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-icon">🔒</div>
+                    <h4>Secure Booking</h4>
+                    <p>SSL-encrypted payment processing with PCI compliance</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">✅</div>
+                    <h4>Verified Reviews</h4>
+                    <p>All reviews from confirmed coaching clients</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">📞</div>
+                    <h4>24/7 Support</h4>
+                    <p>Round-the-clock technical and scheduling support</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🎓</div>
+                    <h4>Expert Coaches</h4>
+                    <p>Former administrators and educational leaders</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Education Leadership Services</h3>
+                    <p>Empowering educators through professional development and coaching services designed for sustainable success.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <a href="#services">1:1 Virtual Coaching</a>
+                    <a href="#services">Professional Workshops</a>
+                    <a href="#services">Rigorous Instruction Course</a>
+                    <a href="#booking">Book Consultation</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <a href="#blog">Blog</a>
+                    <a href="#resources">Free Resources</a>
+                    <a href="#testimonials">Success Stories</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <a href="mailto:info@educationleadershipservices.com">info@educationleadershipservices.com</a>
+                    <a href="tel:+1234567890">(555) 123-4567</a>
+                    <a href="#contact">Schedule Call</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Education Leadership Services. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 4px 20px rgba(30, 58, 95, 0.15)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(30, 58, 95, 0.1)';
+            }
+        });
+
+        // Calendar interaction
+        document.querySelectorAll('.calendar-day.available').forEach(day => {
+            day.addEventListener('click', function() {
+                document.querySelectorAll('.calendar-day').forEach(d => d.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+
+        // Service booking buttons
+        document.querySelectorAll('.book-service-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Booking system would open here with selected service pre-filled. Integration with Kartra Calendar would handle the actual booking flow.');
+            });
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.service-card, .review-card, .stat-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

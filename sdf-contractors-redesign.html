@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDF Contractors - Professional Construction Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Abstract Background Patterns */
+        .bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            background-image: 
+                radial-gradient(circle at 20% 80%, #3d5f44 2px, transparent 2px),
+                radial-gradient(circle at 80% 20%, #fd7b46 1px, transparent 1px);
+            background-size: 60px 60px, 40px 40px;
+            z-index: -1;
+        }
+
+        /* Curved Section Dividers */
+        .curve-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .curve-divider svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 60px;
+        }
+
+        .curve-divider .shape-fill {
+            fill: #FFFFFF;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(61, 95, 68, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #3d5f44;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-icon {
+            background: linear-gradient(135deg, #3d5f44, #fd7b46);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(61, 95, 68, 0.2);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #fd7b46;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #fd7b46;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #3d5f44, #2c4a33);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(61, 95, 68, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(61, 95, 68, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(135deg, #3d5f44 0%, #2c4a33 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Floating Construction Elements */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: -5%;
+            width: 200px;
+            height: 200px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="20" y="40" width="60" height="30" fill="%23fd7b46" opacity="0.1"/><rect x="25" y="30" width="50" height="10" fill="%23fd7b46" opacity="0.15"/><circle cx="30" cy="25" r="3" fill="%23fd7b46" opacity="0.2"/></svg>') no-repeat;
+            background-size: contain;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.3;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 15%;
+            right: -5%;
+            width: 150px;
+            height: 150px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon points="50,10 80,80 20,80" fill="%23fd7b46" opacity="0.1"/><rect x="40" y="70" width="20" height="20" fill="%23fd7b46" opacity="0.15"/></svg>') no-repeat;
+            background-size: contain;
+            animation: float 8s ease-in-out infinite reverse;
+            opacity: 0.2;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: slideUp 1s ease 0.5s forwards;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: slideUp 1s ease 0.7s forwards;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: slideUp 1s ease 0.9s forwards;
+        }
+
+        .btn-primary {
+            background: #fd7b46;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(253, 123, 70, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #e66a35;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(253, 123, 70, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            border: 2px solid white;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #3d5f44;
+        }
+
+        /* About Section */
+        .about {
+            position: relative;
+            padding: 6rem 5% 4rem;
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #3d5f44;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            color: #3d5f44;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 15px;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            border: 1px solid rgba(253, 123, 70, 0.1);
+        }
+
+        .stat-icon {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.2rem;
+            opacity: 0.6;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fd7b46;
+            display: block;
+        }
+
+        .stat-label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* Services Section */
+        .services {
+            position: relative;
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #3d5f44, #fd7b46);
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px) rotateX(5deg) rotateY(5deg);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card:hover .service-icon {
+            animation: pulse 0.6s ease;
+            transform: scale(1.1);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #3d5f44, #fd7b46);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #3d5f44;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Service Badges */
+        .service-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, #fd7b46, #e66a35);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 10px rgba(253, 123, 70, 0.3);
+        }
+
+        /* Impressive Counter Animation */
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fd7b46;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-number::after {
+            content: attr(data-count);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(253, 123, 70, 0.8) 50%,
+                transparent 100%
+            );
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            position: relative;
+            padding: 6rem 5%;
+            background: white;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(61, 95, 68, 0.9));
+            color: white;
+            padding: 2rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+
+        .portfolio-overlay h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Project Badges */
+        .project-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: linear-gradient(135deg, #fd7b46, #e66a35);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(253, 123, 70, 0.4);
+        }
+
+        .project-stats {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .project-stats span {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 8px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background: linear-gradient(135deg, rgba(61, 95, 68, 0.95) 0%, rgba(44, 74, 51, 0.95) 100%);
+            padding: 4rem 0;
+            margin-top: 4rem;
+            position: relative;
+        }
+
+        .testimonials-slider {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .testimonial-card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transform: translateX(100px);
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .testimonial-card.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .testimonial-content {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            position: relative;
+        }
+
+        .quote-icon {
+            font-size: 4rem;
+            color: #fd7b46;
+            line-height: 1;
+            margin-bottom: 1rem;
+            font-family: serif;
+        }
+
+        .testimonial-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: white;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .author-info h4 {
+            color: #fd7b46;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .author-info span {
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        .rating {
+            font-size: 1.2rem;
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .nav-dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-dot.active {
+            background: #fd7b46;
+            transform: scale(1.2);
+        }
+
+        .nav-dot:hover {
+            background: rgba(253, 123, 70, 0.7);
+        }
+
+        /* Contact Section */
+        .contact {
+            position: relative;
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #3d5f44 0%, #2c4a33 100%);
+            color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #fd7b46;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(253, 123, 70, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: #fd7b46;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #fd7b46;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            background: white;
+            box-shadow: 0 0 0 2px #fd7b46;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 3rem 5% 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #fd7b46;
+        }
+
+        .copyright {
+            border-top: 1px solid #333;
+            padding-top: 1rem;
+            color: #999;
+        }
+
+        /* Animations */
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(2deg); }
+            50% { transform: translateY(-10px) rotate(-1deg); }
+            75% { transform: translateY(-30px) rotate(1deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        @keyframes buildUp {
+            0% { 
+                transform: translateY(100px) scale(0.8);
+                opacity: 0;
+            }
+            50% {
+                transform: translateY(20px) scale(1.02);
+                opacity: 0.8;
+            }
+            100% { 
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Impressive Hover Effects */
+        .impressive-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .impressive-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(253, 123, 70, 0.2),
+                transparent
+            );
+            transition: left 0.5s;
+        }
+
+        .impressive-card:hover::before {
+            left: 100%;
+        }
+
+        /* 3D Construction Icons */
+        .construction-3d {
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease;
+        }
+
+        .construction-3d:hover {
+            transform: rotateY(15deg) rotateX(10deg);
+        }
+
+        .construction-3d::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: -5px;
+            bottom: -5px;
+            background: rgba(61, 95, 68, 0.2);
+            border-radius: inherit;
+            z-index: -1;
+            transform: translateZ(-10px);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .services-grid,
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                padding: 1rem 3%;
+            }
+
+            .hero,
+            .about,
+            .services,
+            .portfolio,
+            .contact {
+                padding: 4rem 3%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .service-card,
+            .contact-form {
+                padding: 1.5rem;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <div class="logo-icon">🏗️</div>
+                <span>SDF Contractors</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="cta-button">Get Quote</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="bg-pattern"></div>
+        <div class="hero-content">
+            <h1>Building Your Vision, Delivering Excellence</h1>
+            <p>Professional construction services with over 15 years of experience. From residential to commercial projects, we bring quality and reliability to every build.</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn-primary">Our Services</a>
+                <a href="#portfolio" class="btn-secondary">View Portfolio</a>
+            </div>
+        </div>
+        <div class="curve-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="bg-pattern"></div>
+        <div class="container">
+            <div class="section-header">
+                <h2>About SDF Contractors</h2>
+                <p>With over 15 years of experience in the construction industry, we pride ourselves on delivering exceptional quality and customer satisfaction.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Your Trusted Construction Partner</h3>
+                    <p>At SDF Contractors, we understand that every project is unique. Our team of experienced professionals works closely with clients to bring their vision to life, ensuring quality craftsmanship and timely completion.</p>
+                    <p>From initial consultation to final inspection, we maintain the highest standards of professionalism and attention to detail. Our commitment to excellence has earned us a reputation as one of the leading construction companies in the region.</p>
+                    <div class="stats">
+                        <div class="stat-item impressive-card">
+                            <span class="stat-number counter" data-target="200">0</span><span class="stat-number">+</span>
+                            <span class="stat-label">Projects Completed</span>
+                            <div class="stat-icon">🏗️</div>
+                        </div>
+                        <div class="stat-item impressive-card">
+                            <span class="stat-number counter" data-target="15">0</span><span class="stat-number">+</span>
+                            <span class="stat-label">Years Experience</span>
+                            <div class="stat-icon">⭐</div>
+                        </div>
+                        <div class="stat-item impressive-card">
+                            <span class="stat-number counter" data-target="100">0</span><span class="stat-number">%</span>
+                            <span class="stat-label">Client Satisfaction</span>
+                            <div class="stat-icon">❤️</div>
+                        </div>
+                        <div class="stat-item impressive-card">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Support Available</span>
+                            <div class="stat-icon">🛠️</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Construction team at work">
+                </div>
+            </div>
+        </div>
+        <div class="curve-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill" style="fill: #f8f9fa;"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="bg-pattern"></div>
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Construction Services</h2>
+                <p>We offer comprehensive construction solutions tailored to meet your specific needs and requirements.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card impressive-card construction-3d">
+                    <div class="service-icon">🏠</div>
+                    <h3>Residential Construction</h3>
+                    <p>Custom home building, renovations, and residential improvements with attention to detail and quality craftsmanship.</p>
+                    <div class="service-badge">Premium</div>
+                </div>
+                <div class="service-card impressive-card construction-3d">
+                    <div class="service-icon">🏢</div>
+                    <h3>Commercial Projects</h3>
+                    <p>Office buildings, retail spaces, and commercial developments designed to meet your business needs.</p>
+                    <div class="service-badge">Enterprise</div>
+                </div>
+                <div class="service-card impressive-card construction-3d">
+                    <div class="service-icon">🔧</div>
+                    <h3>Renovation & Remodeling</h3>
+                    <p>Transform your existing space with our expert renovation and remodeling services.</p>
+                    <div class="service-badge">Popular</div>
+                </div>
+                <div class="service-card impressive-card construction-3d">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Project Management</h3>
+                    <p>End-to-end project management ensuring timely completion within budget and to specifications.</p>
+                    <div class="service-badge">Expert</div>
+                </div>
+                <div class="service-card impressive-card construction-3d">
+                    <div class="service-icon">📋</div>
+                    <h3>Design & Planning</h3>
+                    <p>Comprehensive design and planning services to bring your vision to life efficiently.</p>
+                    <div class="service-badge">Creative</div>
+                </div>
+                <div class="service-card impressive-card construction-3d">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Quality Assurance</h3>
+                    <p>Rigorous quality control processes to ensure the highest standards in every project.</p>
+                    <div class="service-badge">Certified</div>
+                </div>
+            </div>
+        </div>
+        <div class="curve-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="bg-pattern"></div>
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Masterpieces</h2>
+                <p>Witness the extraordinary craftsmanship that sets us apart in the construction industry.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item impressive-card">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Office Building">
+                    <div class="portfolio-overlay">
+                        <div class="project-badge">Award Winner</div>
+                        <h3>Modern Office Complex</h3>
+                        <p>A state-of-the-art commercial building with sustainable design features and LEED certification.</p>
+                        <div class="project-stats">
+                            <span>📅 2024</span>
+                            <span>💰 $2.5M</span>
+                            <span>📏 50,000 sq ft</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item impressive-card">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury Residential Home">
+                    <div class="portfolio-overlay">
+                        <div class="project-badge">Featured</div>
+                        <h3>Luxury Family Estate</h3>
+                        <p>Custom-built residential masterpiece with premium finishes and smart home technology.</p>
+                        <div class="project-stats">
+                            <span>📅 2024</span>
+                            <span>💰 $1.8M</span>
+                            <span>📏 8,500 sq ft</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item impressive-card">
+                    <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Retail Shopping Center">
+                    <div class="portfolio-overlay">
+                        <div class="project-badge">Innovation</div>
+                        <h3>Premium Shopping Plaza</h3>
+                        <p>Multi-tenant retail complex with revolutionary customer experience design and accessibility.</p>
+                        <div class="project-stats">
+                            <span>📅 2023</span>
+                            <span>💰 $4.2M</span>
+                            <span>📏 75,000 sq ft</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 style="color: white;">What Our Clients Say</h2>
+                    <p style="color: #ccc;">Don't just take our word for it - hear from our satisfied clients</p>
+                </div>
+                <div class="testimonials-slider">
+                    <div class="testimonial-card active">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">"</div>
+                            <p>"SDF Contractors transformed our vision into reality. Their attention to detail and professionalism exceeded our expectations. The project was completed on time and within budget."</p>
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <h4>Sarah Johnson</h4>
+                                    <span>CEO, TechCorp Industries</span>
+                                </div>
+                                <div class="rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">"</div>
+                            <p>"Outstanding craftsmanship and exceptional service. SDF Contractors delivered a beautiful family home that we're proud to call ours. Highly recommended!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <h4>Michael Rodriguez</h4>
+                                    <span>Homeowner</span>
+                                </div>
+                                <div class="rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">"</div>
+                            <p>"Professional, reliable, and innovative. Their project management was flawless, and the quality of work is simply outstanding. We'll definitely work with them again."</p>
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <h4>Emily Chen</h4>
+                                    <span>Property Developer</span>
+                                </div>
+                                <div class="rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <button class="nav-dot active" onclick="showTestimonial(0)"></button>
+                    <button class="nav-dot" onclick="showTestimonial(1)"></button>
+                    <button class="nav-dot" onclick="showTestimonial(2)"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="curve-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill" style="fill: #3d5f44;"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="bg-pattern"></div>
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">Get In Touch</h2>
+                <p style="color: #ccc;">Ready to start your next construction project? Contact us today for a free consultation and quote.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Construction Ave<br>Builder City, BC 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>(555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@sdfcontractors.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Mon - Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="project">Project Type</label>
+                        <input type="text" id="project" name="project" placeholder="e.g., Home Renovation, Commercial Build">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project Details</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your project requirements..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 SDF Contractors. All rights reserved. | Professional Construction Services</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background opacity on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+            this.reset();
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.service-card, .portfolio-item, .stat-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const increment = target / 100;
+                let current = 0;
+                
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.ceil(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                updateCounter();
+            });
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        const statsSection = document.querySelector('.stats');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // Testimonials Slider
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial-card');
+        const dots = document.querySelectorAll('.nav-dot');
+
+        function showTestimonial(index) {
+            // Hide all testimonials
+            testimonials.forEach((testimonial, i) => {
+                testimonial.classList.remove('active');
+                dots[i].classList.remove('active');
+            });
+            
+            // Show selected testimonial
+            testimonials[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentTestimonial = index;
+        }
+
+        // Auto-slide testimonials
+        setInterval(() => {
+            const nextIndex = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(nextIndex);
+        }, 5000);
+
+        // Add parallax effect to hero background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Add mouse movement effect to service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                card.style.transform = `translateY(-15px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) rotateX(0) rotateY(0)';
+            });
+        });
+
+        // Global function for testimonial navigation
+        window.showTestimonial = showTestimonial;
+    </script>
+</body>
+</html>
