@@ -273,6 +273,41 @@
             width: 100%;
         }
         
+        /* Language Toggle */
+        .language-toggle {
+            display: flex;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 4px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .lang-btn:hover {
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .lang-btn.active {
+            background: linear-gradient(45deg, var(--accent-cyan), var(--accent-pink));
+            color: var(--text-primary);
+            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+        }
+        
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -705,8 +740,18 @@
         
         /* Responsive Design */
         @media (max-width: 768px) {
+            .nav-container {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            
             .nav-links {
                 display: none;
+            }
+            
+            .language-toggle {
+                order: 3;
+                margin-top: 10px;
             }
             
             .hero-title {
@@ -869,20 +914,24 @@
         <div class="nav-container">
             <a href="#hero" class="logo">STELLARPULSE</a>
             <ul class="nav-links">
-                <li><a href="#lineup">Lineup</a></li>
-                <li><a href="#venue">Venue</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#lineup" data-en="Lineup" data-de="Lineup">Lineup</a></li>
+                <li><a href="#venue" data-en="Venue" data-de="Location">Venue</a></li>
+                <li><a href="#about" data-en="About" data-de="Über uns">About</a></li>
+                <li><a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a></li>
             </ul>
+            <div class="language-toggle">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="de">DE</button>
+            </div>
         </div>
     </nav>
     
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-content">
-            <div class="hero-subtitle">Next Event</div>
+            <div class="hero-subtitle" data-en="Next Event" data-de="Nächstes Event">Next Event</div>
             <h1 class="hero-title">COSMIC RESONANCE</h1>
-            <p class="hero-description">
+            <p class="hero-description" data-en="Embark on a transcendental journey through progressive soundscapes, psy-trance dimensions, and hitech frequencies that will pulse through your soul." data-de="Begib dich auf eine transzendentale Reise durch progressive Klanglandschaften, Psy-Trance-Dimensionen und Hitech-Frequenzen, die durch deine Seele pulsieren werden.">
                 Embark on a transcendental journey through progressive soundscapes, 
                 psy-trance dimensions, and hitech frequencies that will pulse through your soul.
             </p>
@@ -911,8 +960,8 @@
             </div>
             
             <div class="cta-container">
-                <a href="#" class="cta-button" id="ticketBtn">Get Tickets Now</a>
-                <a href="#lineup" class="cta-secondary">View Lineup</a>
+                <a href="#" class="cta-button" id="ticketBtn" data-en="Get Tickets Now" data-de="Tickets Kaufen">Get Tickets Now</a>
+                <a href="#lineup" class="cta-secondary" data-en="View Lineup" data-de="Lineup Anzeigen">View Lineup</a>
             </div>
         </div>
     </section>
@@ -920,7 +969,7 @@
     <!-- Lineup Section -->
     <section class="lineup" id="lineup">
         <div class="section-container">
-            <h2 class="section-title">Stellar Lineup</h2>
+            <h2 class="section-title" data-en="Stellar Lineup" data-de="Stellar Lineup">Stellar Lineup</h2>
             
             <div class="artists-grid">
                 <div class="artist-card">
@@ -1025,7 +1074,7 @@
         <div class="section-container">
             <div class="about-content">
                 <div class="about-text">
-                    <h3>About Stellarpulse</h3>
+                    <h3 data-en="About Stellarpulse" data-de="Über Stellarpulse">About Stellarpulse</h3>
                     <p>
                         Stellarpulse is a non-profit collective dedicated to curating 
                         transcendental electronic music experiences across Switzerland. 
@@ -1053,7 +1102,7 @@
                 </div>
                 
                 <div class="contact-info" id="contact">
-                    <h4>Contact & Bookings</h4>
+                    <h4 data-en="Contact & Bookings" data-de="Kontakt & Buchungen">Contact & Bookings</h4>
                     <div class="contact-detail">
                         <strong>Email:</strong> hello@stellarpulse.ch
                     </div>
@@ -1313,6 +1362,82 @@
         }
         
         updateMetaTags();
+        
+        // Language switching functionality
+        let currentLanguage = 'en';
+        const translations = {
+            en: {
+                'Next Event': 'Next Event',
+                'Lineup': 'Lineup',
+                'Venue': 'Venue', 
+                'About': 'About',
+                'Contact': 'Contact',
+                'Date': 'Date',
+                'Time': 'Time',
+                'Location': 'Location',
+                'Genres': 'Genres',
+                'Get Tickets Now': 'Get Tickets Now',
+                'View Lineup': 'View Lineup',
+                'Stellar Lineup': 'Stellar Lineup',
+                'About Stellarpulse': 'About Stellarpulse',
+                'Contact & Bookings': 'Contact & Bookings'
+            },
+            de: {
+                'Next Event': 'Nächstes Event',
+                'Lineup': 'Lineup',
+                'Venue': 'Location',
+                'About': 'Über uns', 
+                'Contact': 'Kontakt',
+                'Date': 'Datum',
+                'Time': 'Zeit',
+                'Location': 'Ort',
+                'Genres': 'Genres',
+                'Get Tickets Now': 'Tickets Kaufen',
+                'View Lineup': 'Lineup Anzeigen',
+                'Stellar Lineup': 'Stellar Lineup',
+                'About Stellarpulse': 'Über Stellarpulse',
+                'Contact & Bookings': 'Kontakt & Buchungen'
+            }
+        };
+        
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Update all elements with translation data
+            document.querySelectorAll('[data-en][data-de]').forEach(element => {
+                const key = element.dataset.en;
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang === 'de' ? 'de-CH' : 'en';
+            
+            // Store language preference
+            localStorage.setItem('stellarpulse-lang', lang);
+        }
+        
+        // Language button event listeners
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                switchLanguage(btn.dataset.lang);
+            });
+        });
+        
+        // Initialize language from localStorage or default to English
+        const savedLanguage = localStorage.getItem('stellarpulse-lang') || 'en';
+        if (savedLanguage !== 'en') {
+            switchLanguage(savedLanguage);
+        }
     </script>
 </body>
 </html>
