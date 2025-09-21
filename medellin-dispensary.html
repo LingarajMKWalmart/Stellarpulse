@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medellin Dispensary | Medical Cannabis Products & Consultation</title>
+    <meta name="description" content="Professional medical cannabis dispensary in Medellin, Colombia. Premium CBD and THC extracts, oils, tinctures, and capsules with prescription delivery service.">
+    <meta name="keywords" content="medical cannabis, CBD oil, THC extracts, Medellin, Colombia, prescription cannabis, medical marijuana">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Medellin Dispensary | Medical Cannabis Products">
+    <meta property="og:description" content="Professional medical cannabis products with prescription delivery in Medellin, Colombia.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-green: #2D7D32;
+            --secondary-green: #4CAF50;
+            --accent-blue: #1976D2;
+            --light-blue: #E3F2FD;
+            --medical-white: #FFFFFF;
+            --light-gray: #F8F9FA;
+            --medium-gray: #6C757D;
+            --dark-gray: #343A40;
+            --success-green: #28A745;
+            --border-color: #E9ECEF;
+            --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --shadow-strong: 0 8px 40px rgba(0, 0, 0, 0.15);
+            --gradient-green: linear-gradient(135deg, #2D7D32 0%, #4CAF50 100%);
+            --gradient-blue: linear-gradient(135deg, #1976D2 0%, #42A5F5 100%);
+            --gradient-light: linear-gradient(135deg, #F8F9FA 0%, #E3F2FD 100%);
+            --glow-green: 0 0 20px rgba(45, 125, 50, 0.3);
+            --glow-blue: 0 0 20px rgba(25, 118, 210, 0.3);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--medical-white);
+            overflow-x: hidden;
+        }
+        
+        /* Smooth scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--light-gray);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-green);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-green);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-light);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .header.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-medium);
+            transform: translateY(0);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .logo::before {
+            content: '🏥';
+            margin-right: 8px;
+            font-size: 1.2rem;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .logo:hover {
+            transform: translateY(-2px);
+        }
+        
+        .logo:hover::before {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-green);
+            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .logo:hover::after {
+            width: 100%;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            padding: 8px 16px;
+            border-radius: 8px;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-green);
+            background: rgba(45, 125, 50, 0.05);
+            transform: translateY(-1px);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-green);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(-50%);
+        }
+        
+        .nav-links a:hover::after {
+            width: 60%;
+        }
+        
+        .consultation-btn {
+            background: var(--gradient-blue);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-light);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .consultation-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .consultation-btn:hover::before {
+            left: 100%;
+        }
+        
+        .consultation-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            filter: brightness(110%);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-light);
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(45, 125, 50, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(25, 118, 210, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: var(--success-green);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease, float 3s ease-in-out infinite 1s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-badge::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s ease-in-out infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+            100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+        }
+        
+        .hero-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: var(--dark-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--medium-gray);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-green);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-medium);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: var(--glow-green);
+            filter: brightness(110%);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-green);
+            padding: 16px 32px;
+            border: 2px solid var(--primary-green);
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Trust Indicators */
+        .trust-section {
+            background: var(--medical-white);
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .trust-item {
+            padding: 2rem;
+            background: var(--medical-white);
+            border-radius: 15px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .trust-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(45, 125, 50, 0.05), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .trust-item:hover::before {
+            left: 100%;
+        }
+        
+        .trust-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-strong);
+            border-color: var(--primary-green);
+        }
+        
+        .trust-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .trust-item:hover .trust-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .trust-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+        
+        .trust-desc {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Product Categories */
+        .products-section {
+            padding: 80px 0;
+            background: var(--light-gray);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--gradient-green);
+            border-radius: 2px;
+            opacity: 0;
+            animation: slideIn 0.8s ease 0.5s forwards;
+        }
+        
+        @keyframes slideIn {
+            0% { 
+                width: 0;
+                opacity: 0; 
+            }
+            100% { 
+                width: 60px;
+                opacity: 1; 
+            }
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background: var(--medical-white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-light);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(45, 125, 50, 0.03), transparent);
+            opacity: 0;
+            transition: all 0.6s ease;
+            animation: rotate 10s linear infinite paused;
+        }
+        
+        .product-card:hover::before {
+            opacity: 1;
+            animation-play-state: running;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: var(--shadow-strong);
+            border-color: var(--primary-green);
+        }
+        
+        .product-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .product-card:hover .product-icon {
+            transform: scale(1.1);
+            box-shadow: var(--glow-green);
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .product-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+        }
+        
+        .product-description {
+            color: var(--medium-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .ratio-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .ratio-tag {
+            background: var(--light-blue);
+            color: var(--accent-blue);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        
+        .ratio-tag:hover {
+            background: var(--accent-blue);
+            color: white;
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+        }
+        
+        .product-link {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+        
+        .product-link:hover {
+            color: var (--secondary-green);
+        }
+        
+        .product-link::after {
+            content: '→';
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-link:hover::after {
+            transform: translateX(3px);
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            padding: 80px 0;
+            background: var(--medical-white);
+        }
+        
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .step {
+            text-align: center;
+            position: relative;
+        }
+        
+        .step::after {
+            content: '';
+            position: absolute;
+            top: 40px;
+            right: -1.5rem;
+            width: 3rem;
+            height: 2px;
+            background: var (--border-color);
+            z-index: 1;
+        }
+        
+        .step:last-child::after {
+            display: none;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .step-number::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-blue);
+            opacity: 0;
+            animation: pulse-ring 2s infinite;
+        }
+        
+        .step:hover .step-number {
+            transform: scale(1.1);
+            box-shadow: var(--glow-blue);
+        }
+        
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.3);
+                opacity: 0;
+            }
+        }
+        
+        .step-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+        }
+        
+        .step-description {
+            color: var(--medium-gray);
+            line-height: 1.6;
+        }
+        
+        /* Educational Hub */
+        .education-section {
+            padding: 80px 0;
+            background: var(--light-gray);
+        }
+        
+        .education-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .education-text {
+            padding-right: 2rem;
+        }
+        
+        .education-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--dark-gray);
+            margin-bottom: 1.5rem;
+        }
+        
+        .education-description {
+            font-size: 1.1rem;
+            color: var(--medium-gray);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        
+        .education-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .education-features li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: var(--dark-gray);
+        }
+        
+        .education-features li::before {
+            content: '✓';
+            color: var(--success-green);
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .education-visual {
+            background: var(--medical-white);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: var(--shadow-light);
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .education-visual::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 300%;
+            height: 300%;
+            background: conic-gradient(from 0deg, transparent, rgba(25, 118, 210, 0.05), transparent);
+            transition: all 0.6s ease;
+            animation: rotate 15s linear infinite paused;
+        }
+        
+        .education-visual:hover::before {
+            animation-play-state: running;
+        }
+        
+        .education-visual:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: var(--shadow-strong);
+        }
+        
+        .education-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Legal Compliance */
+        .compliance-section {
+            padding: 80px 0;
+            background: var(--medical-white);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .compliance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .compliance-card {
+            background: var(--medical-white);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            border: 2px solid var(--border-color);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .compliance-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(25, 118, 210, 0.05), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .compliance-card:hover::before {
+            left: 100%;
+        }
+        
+        .compliance-card:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-strong);
+        }
+        
+        .compliance-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .compliance-card:hover .compliance-icon {
+            transform: scale(1.2) rotate(-5deg);
+        }
+        
+        .compliance-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark-gray);
+            margin-bottom: 0.5rem;
+        }
+        
+        .compliance-desc {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 0;
+            background: var(--gradient-green);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.05"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.03"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.04"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-description {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+        
+        .contact-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-white {
+            background: white;
+            color: var(--primary-green);
+            padding: 16px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-light);
+        }
+        
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .btn-outline-white {
+            background: transparent;
+            color: white;
+            padding: 16px 32px;
+            border: 2px solid white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-white:hover {
+            background: white;
+            color: var(--primary-green);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark-gray);
+            color: white;
+            padding: 60px 0 30px;
+            position: relative;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary-green), transparent);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-green);
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: #B0B0B0;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: var(--secondary-green);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #555;
+            padding-top: 2rem;
+            text-align: center;
+            color: #888;
+        }
+        
+        .footer-section a {
+            color: #B0B0B0;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            padding-left: 0;
+        }
+        
+        .footer-section a::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 1px;
+            background: var(--secondary-green);
+            transition: width 0.3s ease;
+        }
+        
+        .footer-section a:hover::before {
+            width: 6px;
+        }
+        
+        .footer-section a:hover {
+            color: var(--secondary-green);
+            padding-left: 15px;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding: 100px 0 60px;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .education-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .education-text {
+                padding-right: 0;
+                text-align: center;
+            }
+            
+            .step::after {
+                display: none;
+            }
+            
+            .contact-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-white,
+            .btn-outline-white {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .nav-container {
+                padding: 1rem 15px;
+            }
+            
+            .product-card,
+            .trust-item {
+                padding: 1.5rem;
+            }
+            
+            .education-visual {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">Medellin Dispensary</a>
+            <ul class="nav-links">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#consultation" class="consultation-btn">Book Consultation</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">🇨🇴 Licensed Medical Cannabis Provider</div>
+                <h1 class="hero-title">Professional Medical Cannabis Products in Medellin</h1>
+                <p class="hero-subtitle">
+                    Premium CBD and THC extracts, oils, tinctures, and capsules delivered safely to patients with valid medical cannabis prescriptions.
+                </p>
+                <div class="hero-cta">
+                    <a href="#products" class="btn-primary">Browse Products</a>
+                    <a href="#consultation" class="btn-secondary">Free Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-icon">🏥</div>
+                    <h3 class="trust-title">Medical Grade Quality</h3>
+                    <p class="trust-desc">All products undergo rigorous lab testing and quality control standards</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">📋</div>
+                    <h3 class="trust-title">Prescription Required</h3>
+                    <p class="trust-desc">Valid medical cannabis prescription from licensed Colombian doctor required</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🚚</div>
+                    <h3 class="trust-title">Secure Delivery</h3>
+                    <p class="trust-desc">Discreet, secure delivery throughout Medellin metropolitan area</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🔒</div>
+                    <h3 class="trust-title">Fully Licensed</h3>
+                    <p class="trust-desc">Operating under full compliance with Colombian medical cannabis regulations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Medical Cannabis Products</h2>
+                <p class="section-subtitle">
+                    Precisely formulated extracts and products available in various CBD:THC ratios to meet your specific medical needs.
+                </p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">🧪</div>
+                    <h3 class="product-title">CBD/THC Oils</h3>
+                    <p class="product-description">
+                        High-quality cannabis oils available in precise CBD:THC ratios for sublingual administration. Easy dosing with included dropper.
+                    </p>
+                    <div class="ratio-tags">
+                        <span class="ratio-tag">1:1</span>
+                        <span class="ratio-tag">2:1</span>
+                        <span class="ratio-tag">10:1</span>
+                        <span class="ratio-tag">20:1</span>
+                    </div>
+                    <a href="#" class="product-link">View Oil Products</a>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">💊</div>
+                    <h3 class="product-title">Capsules</h3>
+                    <p class="product-description">
+                        Precise dosing capsules for consistent medication. Available in various CBD and THC concentrations with clear milligram labeling.
+                    </p>
+                    <div class="ratio-tags">
+                        <span class="ratio-tag">5mg CBD</span>
+                        <span class="ratio-tag">10mg CBD</span>
+                        <span class="ratio-tag">2.5mg THC</span>
+                        <span class="ratio-tag">5mg THC</span>
+                    </div>
+                    <a href="#" class="product-link">View Capsules</a>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">🧴</div>
+                    <h3 class="product-title">Tinctures</h3>
+                    <p class="product-description">
+                        Fast-acting liquid extracts for sublingual use. Alcohol or MCT oil based formulations with precise cannabinoid profiles.
+                    </p>
+                    <div class="ratio-tags">
+                        <span class="ratio-tag">1:1</span>
+                        <span class="ratio-tag">4:1</span>
+                        <span class="ratio-tag">CBD Only</span>
+                        <span class="ratio-tag">THC Only</span>
+                    </div>
+                    <a href="#" class="product-link">View Tinctures</a>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon">⚗️</div>
+                    <h3 class="product-title">Concentrates</h3>
+                    <p class="product-description">
+                        High-potency cannabis extracts for experienced patients. Available in various extraction methods and cannabinoid profiles.
+                    </p>
+                    <div class="ratio-tags">
+                        <span class="ratio-tag">High CBD</span>
+                        <span class="ratio-tag">Balanced</span>
+                        <span class="ratio-tag">High THC</span>
+                        <span class="ratio-tag">Custom</span>
+                    </div>
+                    <a href="#" class="product-link">View Concentrates</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">
+                    Simple, secure process from prescription verification to delivery
+                </p>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Get Medical Prescription</h3>
+                    <p class="step-description">
+                        Obtain a valid medical cannabis prescription from a licensed Colombian doctor. We can provide referrals to qualified physicians.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Upload Prescription</h3>
+                    <p class="step-description">
+                        Securely upload your prescription through our patient portal. Our pharmacy team will verify and process your documentation.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Product Consultation</h3>
+                    <p class="step-description">
+                        Speak with our cannabis consultants to select the right products and dosages based on your medical needs and prescription.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Secure Delivery</h3>
+                    <p class="step-description">
+                        Receive your medical cannabis products through our discreet, secure delivery service throughout Medellin.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Hub -->
+    <section class="education-section" id="education">
+        <div class="container">
+            <div class="education-content">
+                <div class="education-text">
+                    <h2 class="education-title">Medical Cannabis Education Hub</h2>
+                    <p class="education-description">
+                        Stay informed with the latest research, dosing guidelines, and medical cannabis information. Our educational resources help patients make informed decisions about their treatment.
+                    </p>
+                    <ul class="education-features">
+                        <li>Evidence-based medical cannabis research</li>
+                        <li>Dosing calculators and guidelines</li>
+                        <li>Condition-specific treatment protocols</li>
+                        <li>Drug interaction information</li>
+                        <li>Patient success stories and testimonials</li>
+                        <li>Physician and healthcare provider resources</li>
+                    </ul>
+                    <a href="#" class="btn-primary">Access Education Portal</a>
+                </div>
+                <div class="education-visual">
+                    <div class="education-icon">📚</div>
+                    <h3>Comprehensive Medical Cannabis Library</h3>
+                    <p>Access peer-reviewed research, clinical studies, and expert insights on medical cannabis applications, dosing, and safety protocols.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Compliance -->
+    <section class="compliance-section" id="compliance">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Legal Compliance & Certifications</h2>
+                <p class="section-subtitle">
+                    Operating under full legal compliance with Colombian medical cannabis regulations
+                </p>
+            </div>
+            <div class="compliance-grid">
+                <div class="compliance-card">
+                    <div class="compliance-icon">🏛️</div>
+                    <h3 class="compliance-title">Government Licensed</h3>
+                    <p class="compliance-desc">Licensed by the Colombian Ministry of Health and INVIMA for medical cannabis operations</p>
+                </div>
+                <div class="compliance-card">
+                    <div class="compliance-icon">🔬</div>
+                    <h3 class="compliance-title">Lab Tested</h3>
+                    <p class="compliance-desc">All products undergo third-party laboratory testing for potency, purity, and contaminants</p>
+                </div>
+                <div class="compliance-card">
+                    <div class="compliance-icon">📜</div>
+                    <h3 class="compliance-title">GMP Certified</h3>
+                    <p class="compliance-desc">Manufacturing facility operates under Good Manufacturing Practice (GMP) standards</p>
+                </div>
+                <div class="compliance-card">
+                    <div class="compliance-icon">🛡️</div>
+                    <h3 class="compliance-title">Patient Privacy</h3>
+                    <p class="compliance-desc">HIPAA-equivalent patient privacy protection and secure data handling protocols</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Consultation -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="contact-title">Ready to Start Your Treatment?</h2>
+                <p class="contact-description">
+                    Book a free consultation with our medical cannabis specialists or contact us for more information about our products and services.
+                </p>
+                <div class="contact-cta">
+                    <a href="#" class="btn-white">Book Free Consultation</a>
+                    <a href="#" class="btn-outline-white">Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Medellin Dispensary</h3>
+                    <p>Professional medical cannabis products and services in Medellin, Colombia.</p>
+                    <p>Licensed by Colombian Ministry of Health</p>
+                    <p>INVIMA Registration: #MC-2024-001</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <a href="#">CBD/THC Oils</a>
+                    <a href="#">Capsules</a>
+                    <a href="#">Tinctures</a>
+                    <a href="#">Concentrates</a>
+                    <a href="#">Lab Results</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Patient Resources</h3>
+                    <a href="#">How to Get Prescription</a>
+                    <a href="#">Dosing Guidelines</a>
+                    <a href="#">Medical Cannabis Education</a>
+                    <a href="#">Patient Portal</a>
+                    <a href="#">Insurance Coverage</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📍 Medellin, Colombia</p>
+                    <p>📞 +57 (4) 123-4567</p>
+                    <p>✉️ info@medellindispensary.co</p>
+                    <p>🕒 Mon-Fri: 8AM-6PM</p>
+                    <p>🕒 Sat: 9AM-2PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Medellin Dispensary. All rights reserved. | Privacy Policy | Terms of Service | Medical Disclaimer</p>
+                <p>This website is for informational purposes only and does not constitute medical advice. Always consult with a qualified healthcare provider.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'var(--medical-white)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Enhanced animation on scroll with staggered delays
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) scale(1)';
+                    entry.target.style.filter = 'blur(0px)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for scroll animations with staggered delays
+        document.querySelectorAll('.trust-item, .product-card, .step, .compliance-card').forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(40px) scale(0.95)';
+            el.style.filter = 'blur(2px)';
+            el.style.transition = `all 0.8s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.1}s`;
+            observer.observe(el);
+        });
+
+        // Add floating animation to hero badge
+        const heroBadge = document.querySelector('.hero-badge');
+        if (heroBadge) {
+            heroBadge.style.animation = 'float 3s ease-in-out infinite';
+        }
+
+        // Add parallax effect to hero background elements
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Add mouse move parallax effect for hero section
+        document.addEventListener('mousemove', (e) => {
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                const x = (e.clientX / window.innerWidth) * 100;
+                const y = (e.clientY / window.innerHeight) * 100;
+                
+                hero.style.backgroundPosition = `${x}% ${y}%`;
+            }
+        });
+
+        // Add loading animation for the page
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Enhanced header scroll effect with blur
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            const scrolled = window.scrollY;
+            
+            if (scrolled > 100) {
+                header.classList.add('scrolled');
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(20px)';
+                header.style.borderBottom = '1px solid rgba(45, 125, 50, 0.1)';
+            } else {
+                header.classList.remove('scrolled');
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(20px)';
+                header.style.borderBottom = '1px solid var(--border-color)';
+            }
+        });
+
+        // Premium button click effects
+        document.querySelectorAll('.btn-primary, .btn-secondary, .consultation-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                // Create ripple effect
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.style.position = 'absolute';
+                ripple.style.borderRadius = '50%';
+                ripple.style.background = 'rgba(255, 255, 255, 0.6)';
+                ripple.style.transform = 'scale(0)';
+                ripple.style.animation = 'ripple 0.6s linear';
+                ripple.style.pointerEvents = 'none';
+                
+                this.style.position = 'relative';
+                this.style.overflow = 'hidden';
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+        
+        // Add ripple animation keyframes
+        const rippleStyle = document.createElement('style');
+        rippleStyle.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(rippleStyle);
+        
+        // Smooth reveal animations for content sections
+        const revealElements = document.querySelectorAll('.education-text, .section-header');
+        revealElements.forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = `all 0.8s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.2}s`;
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+            
+            observer.observe(el);
+        });
+        
+        // Add premium typing effect for hero title
+        const heroTitle = document.querySelector('.hero-title');
+        if (heroTitle) {
+            const originalText = heroTitle.textContent;
+            heroTitle.textContent = '';
+            
+            let i = 0;
+            const typeWriter = () => {
+                if (i < originalText.length) {
+                    heroTitle.textContent += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            };
+            
+            setTimeout(typeWriter, 1000);
+        }
+        
+        // Advanced scroll progress indicator
+        const scrollProgress = document.createElement('div');
+        scrollProgress.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-green), var(--accent-blue));
+            z-index: 10000;
+            transition: width 0.1s ease;
+        `;
+        document.body.appendChild(scrollProgress);
+        
+        window.addEventListener('scroll', () => {
+            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            scrollProgress.style.width = scrolled + '%';
+        });
+        
+        // Add professional form validation animations (for future forms)
+        function addFormValidation() {
+            const inputs = document.querySelectorAll('input, textarea, select');
+            inputs.forEach(input => {
+                input.addEventListener('focus', () => {
+                    input.style.borderColor = 'var(--primary-green)';
+                    input.style.boxShadow = '0 0 0 3px rgba(45, 125, 50, 0.1)';
+                });
+                
+                input.addEventListener('blur', () => {
+                    input.style.borderColor = 'var(--border-color)';
+                    input.style.boxShadow = 'none';
+                });
+            });
+        }
+        
+        // Initialize premium interactions
+        document.addEventListener('DOMContentLoaded', () => {
+            addFormValidation();
+            
+            // Add premium loading state to buttons
+            document.querySelectorAll('.btn-primary').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    if (!this.classList.contains('btn-loading')) {
+                        e.preventDefault();
+                        this.classList.add('btn-loading');
+                        const originalText = this.textContent;
+                        this.textContent = '';
+                        
+                        setTimeout(() => {
+                            this.classList.remove('btn-loading');
+                            this.textContent = originalText;
+                        }, 2000);
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>
